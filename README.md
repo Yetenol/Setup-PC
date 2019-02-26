@@ -47,8 +47,16 @@
 - Open `Accounts>Email & accounts`
 > - Add google account
 
-### Onedrive 
+### Install Onedrive 
 - Sign in
+- Open `Taskbar>OneDrive>More>Settings>Settings`
+> - Set `Let me use OneDrive to fetch any of my f‌iles on this PC` to true
+- Open `Taskbar>OneDrive>More>Settings>Settings`
+> - Set `Automatically save photos and videos to OneDrive whenever I connect a camera, phone, or other device to my PC` to true
+> - Set `Automatically save screenshots I capture to OneDrive` to true
+- Open `Explorer>Documents>Properties>Location`
+> - Change location to OneDrive folder
+> - Do the same for Desktop, Downloads, Music and Pictures
 
 ### Install KeePass
 - Download from https://keepass.info/download.html
@@ -80,12 +88,14 @@
 
 ### Install Capture2Text
 - Download from https://sourceforge.net/projects/capture2text/files/Capture2Text/
-- Open `Taskbar>Settings>Hotkeys`
-- Set `Start OCR Capture:`to `Ctrl + Print Screen`
-- Set `Forward Text Line Capture:` to `Alt + Print Screen`
-- Set other to `<Unmapped>`
+- Open `Taskbar>Capture2Text>Settings>Hotkeys`
+> - Set `Start OCR Capture:`to `Ctrl + Print Screen`
+> - Set `Forward Text Line Capture:` to `Alt + Print Screen`
+> - Set `Forward Text Line Capture:` to `Ctrl + Alt + Print Screen`
+> - Set other to `<Unmapped>`
 - Open `Settings>Output`
-- Set `Show popup window to false` to true
+> - Set `Show popup window to false` to true
+- Create shortcut in startup
 
 ### Install Visual Studio Code
 - Download from https://code.visualstudio.com/
@@ -102,12 +112,50 @@
 ### Install Explorer
 - Pin Ribbon (Menubar)
 - Open `View>Options>General`
-- Set `Open File Explorer to:` to `This PC` 
+> - Set `Open File Explorer to:` to `This PC` 
 - Open `View>Options>View`
-- Set `Hidden files and folders` to `Show hidden files. folders, or drives`
+> - Set `Hidden files and folders` to `Show hidden files. folders, or drives`
 
 ### Install Microsoft Office
-- Download from https://account.microsoft.com/services/office/install
-- 
+- Download 64-bit version from https://account.microsoft.com/services/office/install
+- Sign in using Microsoft account
+- Download Language Accessory Pack for Office from https://support.office.com/en-us/article/language-accessory-pack-for-office-82ee1236-0f9a-45ee-9c72-05b026ee809f?ui=en-US&rs=en-US&ad=US
+- Open `File>Options>General>Personalize your copy of Microsoft Office`
+> - Set `Off‌ice Background:` to Geometry
+> - Set `Office Theme:` to Black
+
+### Install 7-Zip
+### Adobe Reader
+- Set it as default pdf viewer (necessary for outlook pdf preview)
 
 ### Install Awesome Tube - App for YouTube
+- Sign in with Google account
+
+### Install WhatsApp Desktop
+
+### Install Git
+- Download from https://git-scm.com/download/win
+
+### Install Arduino
+
+### Install Mail App
+- Open `Settings>Signature`
+> - Set `Apply to all accounts` to true
+> - Set signature to 
+> ```
+> Viele Grüße
+> Anton Pusch
+> ```
+
+Install Skype App
+- Open `Settings>General`
+> - Set `Show Skype in the Windows notif‌ication area
+(system tray)` to false
+- Open `Settings>Appearance`
+> - Set Color to orange
+> - Set Modes to Use system setting
+- Open `Settings>Calling>Advanced`
+> - Set `Answer incoming calls automatically` to true
+- Open `Settings>Messaging`
+> - Set `Text size` to Small
+> - Set `Auto-download f‌iles` to true
