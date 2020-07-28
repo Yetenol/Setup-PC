@@ -72,6 +72,7 @@ Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
     - `System default` Default theme
 - Open `Settings>Site permissions>Notifications`
     - [ ] Ask before sending 
+
 - Install plugins 
 > 1. Install [uBlock Origin](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak)
 > 1. Install [Chrometana - Redirect Bing Somewhere Better](https://chrome.google.com/webstore/detail/chrometana-redirect-bing/kaicbfmipfpfpjmlbpejaoaflfdnabnc)
