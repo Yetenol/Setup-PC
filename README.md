@@ -2,13 +2,13 @@
 
 # Windows Settings
 
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+[x] Write the press release
+[ ] Update the website
+[ ] Contact the media
 
 - Open `System>Display`
 >- Open `Night light settings`
->> [x] Schedule night light
+- [x] Schedule night light
 >- `100%` Change the size of text, apps, and other items
 - Open `System>Notif‌ications & actions`
 [ ] Show notif‌ications on the lock screen
@@ -19,9 +19,9 @@
 >- `15 minutes` On battery power, PC goes to sleep after
 >- `Never` When plugged in, PC goes to sleep after
 - Open `System>Storage`
-> [x] Storage sense
+[x] Storage sense
 - Open `System>Clipboard`
-> [x] Clipboard history
+[x] Clipboard history
 
 - Open `Devices>Touchpad`
 >- Open `Advanced gesture conf‌iguration`
@@ -43,11 +43,11 @@
 >- Set color to orange
 >- `Dark` Choose your default app mode
 - Open `Personalization>Start`
->- [ ] Show more tiles on Start
->- [ ] Show suggestions occasionally in Start
+[ ] Show more tiles on Start
+[ ] Show suggestions occasionally in Start
 - Open `Personalization>Taskbar`
 >- Open `Select which icons appear on the taskbar`
->>- [x] Always show all icons in the notif‌ication area
+[x] Always show all icons in the notif‌ication area
 >>- Hide Cortana search box via taskbar menu
 
 - Open `Accounts>Email & accounts`
@@ -58,9 +58,9 @@
 >- Open `Folder options`
 >- `This PC` Open File Explorer to:
 >- Open `View` tab
->- [ ] Hide extensions for known file types
->- [x] Use check boxes to select item
->- [x] Always show availability status
+[ ] Hide extensions for known file types
+[x] Use check boxes to select item
+[x] Always show availability status
 
 - Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
 >- Install plugins 
@@ -87,14 +87,14 @@ term
 >- Setup fingerprint unlock
 >- Open `Tools>Options>Security`
 >- `30` Lock Workspace after KeePass iniactivity (seconds):
->- [x] Lock workspace when minimizilg main window to taskbar
->- [x] Lock workspace when minimileg main window to tray
->- [x] Lock workspace when the computer is about to be suspended
+[x] Lock workspace when minimizilg main window to taskbar
+[x] Lock workspace when minimileg main window to tray
+[x] Lock workspace when the computer is about to be suspended
 >- ---
 >- Open Tools>Options>Interface
->- [x] Minimizle to tray instead of taskbar
->- [x] Drop to background after copying data to the clipboard
->- [x] Close button [X] izes main window instead of terminating the applicatiotru
+[x] Minimizle to tray instead of taskbar
+[x] Drop to background after copying data to the clipboard
+[X] izes main window instead of terminating the applicatiotru
 
 - Install Visual Studio Code
 >- Install System Installer from https://code.visualstudio.com/#alt-downloads
@@ -103,11 +103,11 @@ term
 - Install OneDrive
 >- Sign in
 >- Open `Taskbar>OneDrive>More>Settings>Settings`
->- [ ] Save space and download files as I use them
->- [x] Let me use OneDrive to fetch any of my f‌iles on this PC
+[ ] Save space and download files as I use them
+[x] Let me use OneDrive to fetch any of my f‌iles on this PC
 >- Open `Backup` tab
->- ``Automatically save photos and videos to OneDrive whenever I connect a camera, phone, or other [ ] e to my PC
->- [x] Automatically save screenshots I capture to OneDrive
+>- ``Automatically save photos and videos to OneDrive whenever I connect a camera, phone, or [ ] e to my PC
+[x] Automatically save screenshots I capture to OneDrive
 >- Open `Explorer>Documents>Properties>Location`
 >- Change location to OneDrive folder
 >- Do the same for Desktop, Downloads, Music and Pictures
@@ -134,7 +134,7 @@ ___
 >- ``Ctrl + Alt + Print Screen`` Forward Text Line Capture:
 >- Set other to `<Unmapped>`
 - Open `Settings>Output`
->- [ ] et `Show popup window t
+[ ] et `Show popup window t
 - Create shortcut in startup
 
 ### Install Visual Studio Code
@@ -180,7 +180,7 @@ ___
 
 ### Install Mail App
 - Open `Settings>Signature`
->- [x] Apply to all accounts
+[x] Apply to all accounts
 >- Set signature to 
 > ```
 > Viele Grüße
@@ -190,12 +190,12 @@ ___
 Install Skype App
 - Open `Settings>General`
 >- ``Show Skype in the Windows notif‌ication area
-(system [ ] 
+[ ] 
 - Open `Settings>Appearance`
 >- Set Color to orange
 >- Set Modes to Use system setting
 - Open `Settings>Calling>Advanced`
->- [x] Answer incoming calls automatically
+[x] Answer incoming calls automatically
 - Open `Settings>Messaging`
 >- `Small` Text size
->- [x] Auto-download f‌iles
+[x] Auto-download f‌iles
