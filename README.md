@@ -1,6 +1,11 @@
 # How to setup my PC
 
 # Windows Settings
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
 - Open `System>Display`
 >- Open `Night light settings`
 >> [x] Schedule night light
