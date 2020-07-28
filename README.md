@@ -65,13 +65,13 @@ Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
 - Open `Settings>Profiles>Addresses and more`
     - [ ] Save and fill addresses
 - Open `Privacy and services>Address bar`
->- `Google` Search engine used in the address bar
->- Open `Privacy and services>Address bar>Manage search engines`
->- Delete all but Google
+    - `Google` Search engine used in the address bar
+    - Open `Privacy and services>Address bar>Manage search engines`
+    - Delete all but Google
 - Open `Settings>Appearance`
     - `System default` Default theme
 - Open `Settings>Site permissions>Notifications`
-- [ ] Ask before sending 
+    - [ ] Ask before sending 
 - Install plugins 
 > 1. Install [uBlock Origin](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak)
 > 1. Install [Chrometana - Redirect Bing Somewhere Better](https://chrome.google.com/webstore/detail/chrometana-redirect-bing/kaicbfmipfpfpjmlbpejaoaflfdnabnc)
