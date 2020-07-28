@@ -6,8 +6,8 @@
 >> [x] Schedule night light
 >- `100%` Change the size of text, apps, and other items
 - Open `System>Notif‌ications & actions`
-> [ ] Show notif‌ications on the lock screen
-> [ ] Show me the Windows welcome experience after updates and occasionally
+[ ] Show notif‌ications on the lock screen
+[ ] Show me the Windows welcome experience after updates and occasionally
 - Open `System>Power & sleep`
 >- `10 minutes` On battery power, turn off after
 >- `20 minutes` When plugged in, turn off after
