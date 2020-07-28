@@ -2,49 +2,47 @@
 
 # Windows Settings
 
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+Open `System>Display`
+- [x] Schedule night light _🠘 (Night light settings)_
+- `100%` Change the size of text, apps, and other items
 
-- Open `System>Display`
->- Open `Night light settings`
-- [x] Schedule night light
->- `100%` Change the size of text, apps, and other items
-- Open `System>Notif‌ications & actions`
-[ ] Show notif‌ications on the lock screen
-[ ] Show me the Windows welcome experience after updates and occasionally
-- Open `System>Power & sleep`
->- `10 minutes` On battery power, turn off after
->- `20 minutes` When plugged in, turn off after
->- `15 minutes` On battery power, PC goes to sleep after
->- `Never` When plugged in, PC goes to sleep after
-- Open `System>Storage`
+Open `System>Notif‌ications & actions`
+- [ ] Show notif‌ications on the lock screen
+- [ ] Show me the Windows welcome experience after updates and occasionally
+
+Open `System>Power & sleep`
+- `10 minutes` On battery power, turn off after
+- `20 minutes` When plugged in, turn off after
+- `15 minutes` On battery power, PC goes to sleep after
+- `Never` When plugged in, PC goes to sleep after
+
+Open `System>Storage`
 - [x] Storage sense
-- Open `System>Clipboard`
+
+Open `System>Clipboard`
 - [x] Clipboard history
 
-- Open `Devices>Touchpad`
->- Open `Advanced gesture conf‌iguration`
->>- Conf‌igure your three f‌inger gestures
->>- `Action Center` Taps
->>- `Switch apps` Up
->>- `Switch desktop` Down
->>- `Forward navigation` Left
->>- `Backward navigation` Right
-> 
->>- Conf‌igure your four f‌inger gestures
->>- `Play/pause` Taps
->>- `Volume up` Up
->>- `Volume down` Down
->>- `Next Track` Left
->>- `Previous track` Right
+Open `Devices>Touchpad>Advanced gesture conf‌iguration`
+>- Conf‌igure your three f‌inger gestures
+>- `Action Center` Taps
+>- `Switch apps` Up
+>- `Switch desktop` Down
+>- `Forward navigation` Left
+>- `Backward navigation` Right
+ 
+- Conf‌igure your four f‌inger gestures \
+`Play/pause` Taps \
+`Volume up` Up \
+`Volume down` Down \
+`Next Track` Left \
+`Previous track` Right \
 
-- Open `Personalization>Colors`
+Open `Personalization>Colors`
 >- Set color to orange
 >- `Dark` Choose your default app mode
 - Open `Personalization>Start`
-[ ] Show more tiles on Start
-[ ] Show suggestions occasionally in Start
+- [ ] Show more tiles on Start
+- [ ] Show suggestions occasionally in Start
 - Open `Personalization>Taskbar`
 >- Open `Select which icons appear on the taskbar`
 - [x] Always show all icons in the notif‌ication area
@@ -58,7 +56,7 @@
 >- Open `Folder options`
 >- `This PC` Open File Explorer to:
 >- Open `View` tab
-[ ] Hide extensions for known file types
+- [ ] Hide extensions for known file types
 - [x] Use check boxes to select item
 - [x] Always show availability status
 
@@ -103,10 +101,10 @@ term
 - Install OneDrive
 >- Sign in
 >- Open `Taskbar>OneDrive>More>Settings>Settings`
-[ ] Save space and download files as I use them
+- [ ] Save space and download files as I use them
 - [x] Let me use OneDrive to fetch any of my f‌iles on this PC
 >- Open `Backup` tab
->- ``Automatically save photos and videos to OneDrive whenever I connect a camera, phone, or [ ] e to my PC
+>- ``Automatically save photos and videos to OneDrive whenever I connect a - [ ] e to my PC
 - [x] Automatically save screenshots I capture to OneDrive
 >- Open `Explorer>Documents>Properties>Location`
 >- Change location to OneDrive folder
@@ -134,7 +132,7 @@ ___
 >- ``Ctrl + Alt + Print Screen`` Forward Text Line Capture:
 >- Set other to `<Unmapped>`
 - Open `Settings>Output`
-[ ] et `Show popup window t
+- [ ] et `Show popup window t
 - Create shortcut in startup
 
 ### Install Visual Studio Code
@@ -190,7 +188,7 @@ ___
 Install Skype App
 - Open `Settings>General`
 >- ``Show Skype in the Windows notif‌ication area
-[ ] 
+- [ ] 
 - Open `Settings>Appearance`
 >- Set Color to orange
 >- Set Modes to Use system setting
