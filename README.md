@@ -2,68 +2,64 @@
 
 # Windows Settings
 - Open `System>Display`
-> - Open `Night light settings`
->> - Set `Schedule night light` to true
-> - Set `Change the size of text, apps, and other items` to 100%
+>- Open `Night light settings`
+>> [x]  `Schedule night light
+>- `100%` Change the size of text, apps, and other items
 - Open `System>Notif‌ications & actions`
-> - Set `Show notif‌icd tions on the lock screen` to false
-> - Set `Show me the Windows welcome experience after updates and occasionally` to false
+> [ ]  `Show notif‌ications on the lock screen
+> [ ]  `Show me the Windows welcome experience after updates and occasionally
 - Open `System>Power & sleep`
-> - Set `On battery power, turn off after` to 10 minutes
-> - Set `When plugged in, turn off after` to 20 minutes
-> - Set `On battery power” PC goes to sleep after` to 15 minutes
-> - Set `When plugged in, P“ goes to sleep after` to Never
+>- `10 minutes` On battery power, turn off after
+>- `20 minutes` When plugged in, turn off after
+>- `15 minutes` On battery power, PC goes to sleep after
+>- `Never` When plugged in, PC goes to sleep after
 - Open `System>Storage`
-> - Set `Storage sense` to true
+> [x]  `Storage sense
 - Open `System>Clipboard`
-> - Set `Clipboard history` to true
+> [x]  `Clipboard history
 
 - Open `Devices>Touchpad`
-> - Open `Advanced gesture conf‌iguration`
-> > - Conf‌igure your three f‌inger gestures
-> > - Set `Taps` to Action Center
-> > - Set `Up` to Switch apps
-> > - Set `Down` to Switch desktop
-> > - Set `Left` to Forward navigation
-> > - Set `Right` to Backward navigation
+>- Open `Advanced gesture conf‌iguration`
+>>- Conf‌igure your three f‌inger gestures
+>>- `Action Center` Taps
+>>- `Switch apps` Up
+>>- `Switch desktop` Down
+>>- `Forward navigation` Left
+>>- `Backward navigation` Right
 > 
-> > - Conf‌igure your four f‌inger gestures
-> > - Set `Taps` to Play/pause
-> > - Set `Up` to Volume up
-> > - Set `Down` to Volume down
-> > - Set `Left` to Next Track
-> > - Set `Right` to Previous track
+>>- Conf‌igure your four f‌inger gestures
+>>- `Play/pause` Taps
+>>- `Volume up` Up
+>>- `Volume down` Down
+>>- `Next Track` Left
+>>- `Previous track` Right
 
 - Open `Personalization>Colors`
-> - Set color to orange
-> - Set `Choose your default app mode` to Dark
+>- Set color to orange
+>- `Dark` Choose your default app mode
 - Open `Personalization>Start`
-> - Set `Show more tiles on Start` to false
-> - Set `Show suggestions occasionally in Start` to false
+>- [ ] Show more tiles on Start
+>- [ ] Show suggestions occasionally in Start
 - Open `Personalization>Taskbar`
-> - Open `Select which icons appear on the taskbar`
-> > - Set `Always show all icons in the notif‌ication area` to true
+>- Open `Select which icons appear on the taskbar`
+>>- [x] Always show all icons in the notif‌ication area
+>>- Hide Cortana search box via taskbar menu
 
 - Open `Accounts>Email & accounts`
-> - Add google account
+>- Add google account
 
 # Install essential apps
 - Setup Windows explorer
 >- Open `Folder options`
->- Set `Open File Explorer to:` to This PC
+>- `This PC` Open File Explorer to:
 >- Open `View` tab
->- Set `Hide extensions for known file types` to false
->- Set `Use check boxes to select item` to true
->- Set `Always show availability status` to true
-
 >- [ ] Hide extensions for known file types
 >- [x] Use check boxes to select item
 >- [x] Always show availability status
 
 - Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
 >- Install plugins 
->> 1. Install [Dark Reader](https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc?hl=en-US) \
->> Set `Invert list only` to 
+>> 1. Install [Dark Reader](https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc?h>> ``Invert list onlyl =en-US) \
 ```
 www.google.com/search
 www.amazon.de
@@ -85,15 +81,15 @@ term
 >- Install plugin [WinHelloUnlock](https://github.com/Angelelz/WinHelloUnlock/releases)
 >- Setup fingerprint unlock
 >- Open `Tools>Options>Security`
->- Set `Lock Workspace after KeePass iniactivity (seconds):` to 30
->- Set `Lock workspace when minimizilg main window to taskbar` to true
->- Set `Lock workspace when minimileg main window to tray` to true
->- Set `Lock workspace when the computer is about to be suspended` to true
+>- `30` Lock Workspace after KeePass iniactivity (seconds):
+>- [x] Lock workspace when minimizilg main window to taskbar
+>- [x] Lock workspace when minimileg main window to tray
+>- [x] Lock workspace when the computer is about to be suspended
 >- ---
 >- Open Tools>Options>Interface
->- Set `Minimizle to tray instead of taskbar` to true
->- Set `Drop to background after copying data to the clipboard` to true
->- Set `Close button [X] minimizes main window instead of terminating the application` to true
+>- [x] Minimizle to tray instead of taskbar
+>- [x] Drop to background after copying data to the clipboard
+>- [x] Close button [X] izes main window instead of terminating the applicatiotru
 
 - Install Visual Studio Code
 >- Install System Installer from https://code.visualstudio.com/#alt-downloads
@@ -102,11 +98,11 @@ term
 - Install OneDrive
 >- Sign in
 >- Open `Taskbar>OneDrive>More>Settings>Settings`
->- Set `Save space and download files as I use them` to false
->- Set `Let me use OneDrive to fetch any of my f‌iles on this PC` to true
+>- [ ] Save space and download files as I use them
+>- [x] Let me use OneDrive to fetch any of my f‌iles on this PC
 >- Open `Backup` tab
->- Set `Automatically save photos and videos to OneDrive whenever I connect a camera, phone, or other device to my PC` to false
->- Set `Automatically save screenshots I capture to OneDrive` to true
+>- ``Automatically save photos and videos to OneDrive whenever I connect a camera, phone, or other [ ] e to my PC
+>- [x] Automatically save screenshots I capture to OneDrive
 >- Open `Explorer>Documents>Properties>Location`
 >- Change location to OneDrive folder
 >- Do the same for Desktop, Downloads, Music and Pictures
@@ -115,7 +111,7 @@ ___
 
 ### Custom special key
 - Press `Fn + F11`
-- Set `User defined key` to `KeePass`
+- ``KeePass`` User defined key
 - Press `Fn + F12`
 
 ### Install Firefox
@@ -128,40 +124,40 @@ ___
 ### Install Capture2Text
 - Download from https://sourceforge.net/projects/capture2text/files/Capture2Text/
 - Open `Taskbar>Capture2Text>Settings>Hotkeys`
-> - Set `Start OCR Capture:`to `Ctrl + Print Screen`
-> - Set `Forward Text Line Capture:` to `Alt + Print Screen`
-> - Set `Forward Text Line Capture:` to `Ctrl + Alt + Print Screen`
-> - Set other to `<Unmapped>`
+>- ``Start OCR Capture:`to `Ctrl + Print Screen`
+>- ``Alt + Print Screen`` Forward Text Line Capture:
+>- ``Ctrl + Alt + Print Screen`` Forward Text Line Capture:
+>- Set other to `<Unmapped>`
 - Open `Settings>Output`
-> - Set `Show popup window to false` to true
+>- [ ] et `Show popup window t
 - Create shortcut in startup
 
 ### Install Visual Studio Code
 - Download from https://code.visualstudio.com/
 - Open `Preferences>Settings`
-- Set `Auto Save` to `onFocusChange`
+- ``onFocusChange`` Auto Save
 
 ### Install GitKraken
 - Sign in using Github
 
 ### Install Telegram Desktop App
 - Open Display
-- Set `Themes` to `Matrix`
+- ``Matrix`` Themes
 
 ### Install Explorer
 - Pin Ribbon (Menubar)
 - Open `View>Options>General`
-> - Set `Open File Explorer to:` to `This PC` 
+>- ``This PC` ` Open File Explorer to:
 - Open `View>Options>View`
-> - Set `Hidden files and folders` to `Show hidden files. folders, or drives`
+>- ``Show hidden files. folders, or drives`` Hidden files and folders
 
 ### Install Microsoft Office
 - Download 64-bit version from https://account.microsoft.com/services/office/install
 - Sign in using Microsoft account
 - Download Language Accessory Pack for Office from https://support.office.com/en-us/article/language-accessory-pack-for-office-82ee1236-0f9a-45ee-9c72-05b026ee809f?ui=en-US&rs=en-US&ad=US
 - Open `File>Options>General>Personalize your copy of Microsoft Office`
-> - Set `Off‌ice Background:` to Geometry
-> - Set `Office Theme:` to Black
+>- `Geometry` Off‌ice Background:
+>- `Black` Office Theme:
 
 ### Install 7-Zip
 ### Adobe Reader
@@ -179,8 +175,8 @@ ___
 
 ### Install Mail App
 - Open `Settings>Signature`
-> - Set `Apply to all accounts` to true
-> - Set signature to 
+>- [x] Apply to all accounts
+>- Set signature to 
 > ```
 > Viele Grüße
 > Anton Pusch
@@ -188,13 +184,13 @@ ___
 
 Install Skype App
 - Open `Settings>General`
-> - Set `Show Skype in the Windows notif‌ication area
-(system tray)` to false
+>- ``Show Skype in the Windows notif‌ication area
+(system [ ] 
 - Open `Settings>Appearance`
-> - Set Color to orange
-> - Set Modes to Use system setting
+>- Set Color to orange
+>- Set Modes to Use system setting
 - Open `Settings>Calling>Advanced`
-> - Set `Answer incoming calls automatically` to true
+>- [x] Answer incoming calls automatically
 - Open `Settings>Messaging`
-> - Set `Text size` to Small
-> - Set `Auto-download f‌iles` to true
+>- `Small` Text size
+>- [x] Auto-download f‌iles
