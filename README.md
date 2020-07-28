@@ -53,27 +53,32 @@ Open `Accounts>Email & accounts`
 - Add google account
 
 # Install essential apps
-Open `File Explorer options`
+### Open `File Explorer options`
 - `This PC` Open File Explorer to:
 - Open View tab
 - [ ] Hide extensions for known file types
 - [x] Use check boxes to select item
 - [x] Always show availability status
+---
+### Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
 
-Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
-- Sign in to sync
-- Open `Settings>Profiles>Addresses and more`
-    - [ ] Save and fill addresses
-- Open `Privacy and services>Address bar`
-    - `Google` Search engine used in the address bar
-    - Open `Privacy and services>Address bar>Manage search engines`
-    - Delete all but Google
-- Open `Settings>Appearance`
-    - `System default` Default theme
-- Open `Settings>Site permissions>Notifications`
-    - [ ] Ask before sending 
+Sign in to sync
 
-- Install plugins 
+Open `Settings>Profiles>Addresses and more`
+- [ ] Save and fill addresses
+
+Open `Privacy and services>Address bar`
+- `Google` Search engine used in the address bar
+- Open `Privacy and services>Address bar>Manage search engines`
+- Delete all but Google
+
+Open `Settings>Appearance`
+- `System default` Default theme
+
+Open `Settings>Site permissions>Notifications`
+- [ ] Ask before sending 
+
+Install plugins 
 > 1. Install [uBlock Origin](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak)
 > 1. Install [Chrometana - Redirect Bing Somewhere Better](https://chrome.google.com/webstore/detail/chrometana-redirect-bing/kaicbfmipfpfpjmlbpejaoaflfdnabnc)
 > 1. Install [Tabliss - A Beautiful New Tab](https://chrome.google.com/webstore/detail/tabliss-a-beautiful-new-t/hipekcciheckooncpjeljhnekcoolahp)
@@ -106,26 +111,23 @@ Add allowed site `https://www.youtube.com/*`
 > www.howtogeek.com
 > ```
 
-- Setup keyboard shortcuts <br>
-`Alt + D` _Dark Reader :_ Activate the extension <br>
-`Alt + Shift + D` _Dark Reader :_ Toggle current site <br>
-`Alt + I` _Download All Images :_ Activate the extension <br>
-`Alt + o` _Office :_ Activate the extension <br>
-`Alt + B` _uBlock Origin :_ Enter element picker mode <br>
-`Alt + Z` _uBlock Origin :_ Enter element zapper mode <br>
-`Alt + S` _Chameleon :_ Activate the extension <br>
-`Alt + P` _Picture-in-Picture :_ Activate the extension <br>
-`Alt + U` _User-Agent Switcher :_ Activate the extension
+Setup keyboard shortcuts
+> `Alt + D` _Dark Reader :_ Activate the extension <br>
+> `Alt + Shift + D` _Dark Reader :_ Toggle current site <br>
+> `Alt + I` _Download All Images :_ Activate the extension <br>
+> `Alt + o` _Office :_ Activate the extension <br>
+> `Alt + B` _uBlock Origin :_ Enter element picker mode <br>
+> `Alt + Z` _uBlock Origin :_ Enter element zapper mode <br>
+> `Alt + S` _Chameleon :_ Activate the extension <br>
+> `Alt + P` _Picture-in-Picture :_ Activate the extension <br>
+> `Alt + U` _User-Agent Switcher :_ Activate the extension
+---
+### Install [KeePass](https://keepass.info/download.html)
+- Install plugin [WinHelloUnlock](https://github.com/Angelelz/WinHelloUnlock/releases)
+- Setup fingerprint unlock
 
-
-___
-___
-
-- Install [KeePass](https://keepass.info/download.html)
->- Install plugin [WinHelloUnlock](https://github.com/Angelelz/WinHelloUnlock/releases)
->- Setup fingerprint unlock
- Open `Tools>Options>Security`
->- `30` Lock Workspace after KeePass iniactivity (seconds):
+Open `Tools>Options>Security`
+- `30` Lock Workspace after KeePass iniactivity (seconds):
 - [x] Lock workspace when minimizilg main window to taskbar
 - [x] Lock workspace when minimileg main window to tray
 - [x] Lock workspace when the computer is about to be suspended
