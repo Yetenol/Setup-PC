@@ -1,6 +1,6 @@
-# Setup my PC
+# How to setup my PC
 
-### Windows Settings
+# Windows Settings
 - Open `System>Display`
 > - Open `Night light settings`
 >> - Set `Schedule night light` to true
@@ -47,32 +47,71 @@
 - Open `Accounts>Email & accounts`
 > - Add google account
 
-### Install Onedrive 
-- Sign in
-- Open `Taskbar>OneDrive>More>Settings>Settings`
-> - Set `Let me use OneDrive to fetch any of my f‌iles on this PC` to true
-- Open `Taskbar>OneDrive>More>Settings>Settings`
-> - Set `Automatically save photos and videos to OneDrive whenever I connect a camera, phone, or other device to my PC` to true
-> - Set `Automatically save screenshots I capture to OneDrive` to true
-- Open `Explorer>Documents>Properties>Location`
-> - Change location to OneDrive folder
-> - Do the same for Desktop, Downloads, Music and Pictures
+# Install essential apps
+- Setup Windows explorer
+>- Open `Folder options`
+>- Set `Open File Explorer to:` to This PC
+>- Open `View` tab
+>- Set `Hide extensions for known file types` to false
+>- Set `Use check boxes to select item` to true
+>- Set `Always show availability status` to true
 
-### Install KeePass
-- Download from https://keepass.info/download.html
-- Open `Tools>Options>Security`
-> - Set `Lock Workspace after KeePass iniactivity (seconds):` to 30
-> - Set `Lock workspace when minimizilg main window to taskbar` to true
-> - Set `Lock workspace when minimileg main window to tray` to true
-> - Set `Lock workspace when the computer is about to be suspended` to true
-- Open Tools>Options>Interface
-> - Set `Minimizle to tray instead of taskbar` to true
-> - Set `Drop to background after copying data to the clipboard` to true
-> - Set `Close button [X] minimizes main window instead of terminating the application` to true
-- Open C:\Users\anton\OneDrive\KeePass\Yetenol.kdbx
-- Download KeePassWinHelloPlugin.plgx from https://github.com/sirAndros/KeePassWinHello/releases
-- Move it to `C:\Program Files (x86)\KeePass Password Safe 2\Plugins`
-- Close KeePass
+>- [ ] Hide extensions for known file types
+>- [x] Use check boxes to select item
+>- [x] Always show availability status
+
+- Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
+>- Install plugins 
+>> 1. Install [Dark Reader](https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc?hl=en-US) \
+>> Set `Invert list only` to 
+```
+www.google.com/search
+www.amazon.de
+github.com
+displate.com
+www.reddit.com
+accounts.google.com
+mail.google.com
+contacts.google.com
+fahrkarten.bahn.de
+www.howtogeek.com
+```
+
+term
+: definition
+: asd
+
+- Install [KeePass](https://keepass.info/download.html)
+>- Install plugin [WinHelloUnlock](https://github.com/Angelelz/WinHelloUnlock/releases)
+>- Setup fingerprint unlock
+>- Open `Tools>Options>Security`
+>- Set `Lock Workspace after KeePass iniactivity (seconds):` to 30
+>- Set `Lock workspace when minimizilg main window to taskbar` to true
+>- Set `Lock workspace when minimileg main window to tray` to true
+>- Set `Lock workspace when the computer is about to be suspended` to true
+>- ---
+>- Open Tools>Options>Interface
+>- Set `Minimizle to tray instead of taskbar` to true
+>- Set `Drop to background after copying data to the clipboard` to true
+>- Set `Close button [X] minimizes main window instead of terminating the application` to true
+
+- Install Visual Studio Code
+>- Install System Installer from https://code.visualstudio.com/#alt-downloads
+>- During setup progress tick _Open with_ options for context menu
+
+- Install OneDrive
+>- Sign in
+>- Open `Taskbar>OneDrive>More>Settings>Settings`
+>- Set `Save space and download files as I use them` to false
+>- Set `Let me use OneDrive to fetch any of my f‌iles on this PC` to true
+>- Open `Backup` tab
+>- Set `Automatically save photos and videos to OneDrive whenever I connect a camera, phone, or other device to my PC` to false
+>- Set `Automatically save screenshots I capture to OneDrive` to true
+>- Open `Explorer>Documents>Properties>Location`
+>- Change location to OneDrive folder
+>- Do the same for Desktop, Downloads, Music and Pictures
+
+___
 
 ### Custom special key
 - Press `Fn + F11`
