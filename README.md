@@ -59,10 +59,11 @@ Open `Accounts>Email & accounts`
 - [ ] Hide extensions for known file types
 - [x] Use check boxes to select item
 - [x] Always show availability status
----
+___
+
 ### Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
 
-Sign in to sync
+- Sign in to sync
 
 Open `Settings>Profiles>Addresses and more`
 - [ ] Save and fill addresses
@@ -121,116 +122,104 @@ Setup keyboard shortcuts
 > `Alt + S` _Chameleon :_ Activate the extension <br>
 > `Alt + P` _Picture-in-Picture :_ Activate the extension <br>
 > `Alt + U` _User-Agent Switcher :_ Activate the extension
----
+___
+
 ### Install [KeePass](https://keepass.info/download.html)
 - Install plugin [WinHelloUnlock](https://github.com/Angelelz/WinHelloUnlock/releases)
 - Setup fingerprint unlock
 
 Open `Tools>Options>Security`
 - `30` Lock Workspace after KeePass iniactivity (seconds):
-- [x] Lock workspace when minimizilg main window to taskbar
-- [x] Lock workspace when minimileg main window to tray
+- [x] Lock workspace when minimizing main window to taskbar
+- [x] Lock workspace when minimizing main window to tray
+- [x] Lock workspace when locking the computer or switching the user
 - [x] Lock workspace when the computer is about to be suspended
->- ---
- Open Tools>Options>Interface
-- [x] Minimizle to tray instead of taskbar
+- [x] Lock workspace when the remote control mode changes
+- [x] Enter master key on secure desktop
+
+Open `Tools>Options>Interface`
+- [x] Minimize to tray instead of taskbar
 - [x] Drop to background after copying data to the clipboard
-- [X] izes main window instead of terminating the applicatiotru
+- [x] Close button [X] minimizes main windows instead of terminating the application
+- [x] Focus entry list after a successful quick search
+- [x] Focus quick search box when restoring from taskbar
+- [x] Focus quick search box when restoring from tray
+___
 
-- Install Visual Studio Code
->- Install System Installer from https://code.visualstudio.com/#alt-downloads
->- During setup progress tick _Open with_ options for context menu
+### Install Visual Studio Code
+- Install **System Installer** from https://code.visualstudio.com/#alt-downloads
+- During setup progress tick _Open with_ options for context menu
 
-- Install OneDrive
->- Sign in
- Open `Taskbar>OneDrive>More>Settings>Settings`
+Open `Preferences>Settings`
+- ``onFocusChange`` Files: Auto Save
+___
+
+### Install OneDrive
+- Sign in
+
+Open `Taskbar>OneDrive>More>Settings>Settings`
 - [ ] Save space and download files as I use them
 - [x] Let me use OneDrive to fetch any of my f‌iles on this PC
  Open `Backup` tab
 - [x] Automatically save screenshots I capture to OneDrive
- Open `Explorer>Documents>Properties>Location`
+
+Open `Explorer>Documents>Properties>Location`
 >- Change location to OneDrive folder
 >- Do the same for Desktop, Downloads, Music and Pictures
-
 ___
 
 ### Custom special key
-- Press `Fn + F11`
-- ``KeePass`` User defined key
-- Press `Fn + F12`
+- Open Keyboard Manager via `Fn + F11`
+- Set `User defined key` to your kdbx database
+- Test `Fn + F12`
+___
 
-### Install Firefox
-- Sign in
-- Press `Start` and enter `Choose a default web browser AND select Firefox`
-- Select Firefox
-- Install SearchWithMyBrowser
-- Search any web text and select Firefox
+### Install [Capture2Text](https://sourceforge.net/projects/capture2text/files/Capture2Text/)
 
-### Install Capture2Text
-- Download from https://sourceforge.net/projects/capture2text/files/Capture2Text/
 Open `Taskbar>Capture2Text>Settings>Hotkeys`
->- ``Start OCR Capture:`to `Ctrl + Print Screen`
->- ``Alt + Print Screen`` Forward Text Line Capture:
->- ``Ctrl + Alt + Print Screen`` Forward Text Line Capture:
->- Set other to `<Unmapped>`
-Open `Settings>Output`
-- [ ] et `Show popup window t
-- Create shortcut in startup
+- `Ctrl + Print Screen` Start OCR Capture
+- `Ctrl + Shift + Print Screen` Re Capture Last
+- `Alt + Print Screen` Text Line Capture:
+- Set everything else to `<Unmapped>`
+___
 
-### Install Visual Studio Code
-- Download from https://code.visualstudio.com/
-Open `Preferences>Settings`
-- ``onFocusChange`` Auto Save
-
-### Install GitKraken
+### Install [Github](https://www.gitkraken.com/download/windows64)
 - Sign in using Github
+___
 
-### Install Telegram Desktop App
-Open Display
-- ``Matrix`` Themes
+### Install [Telegram Desktop](https://www.microsoft.com/de-de/p/telegram-desktop/9nztwsqntd0s?activetab=pivot:overviewtab)
 
-### Install Explorer
-- Pin Ribbon (Menubar)
-Open `View>Options>General`
->- ``This PC` ` Open File Explorer to:
-Open `View>Options>View`
->- ``Show hidden files. folders, or drives`` Hidden files and folders
+Open `Settings>Chat Settings`
+- [x] Match the system settings
 
-### Install Microsoft Office
-- Download 64-bit version from https://account.microsoft.com/services/office/install
+Open `Settings>Notifications`
+- [x] Use Windows notifications
+
+Open `Settings>Advanced`
+- [x] Use system window frame
+- Open `Manage local storage`
+    - `Never` Clear files older than
+___
+
+
+### Install [Microsoft Office](https://account.microsoft.com/services/office/install)
+
 - Sign in using Microsoft account
-- Download Language Accessory Pack for Office from https://support.office.com/en-us/article/language-accessory-pack-for-office-82ee1236-0f9a-45ee-9c72-05b026ee809f?ui=en-US&rs=en-US&ad=US
+- Download [Language Accessory Pack](https://support.office.com/en-us/article/language-accessory-pack-for-office-82ee1236-0f9a-45ee-9c72-05b026ee809f?ui=en-US&rs=en-US&ad=US)
+
 Open `File>Options>General>Personalize your copy of Microsoft Office`
 >- `Geometry` Off‌ice Background:
 >- `Black` Office Theme:
-
-### Install 7-Zip
-### Adobe Reader
-- Set it as default pdf viewer (necessary for outlook pdf preview)
-
-### Install Awesome Tube - App for YouTube
-- Sign in with Google account
-
-### Install WhatsApp Desktop
-
-### Install Git
-- Download from https://git-scm.com/download/win
-
-### Install Arduino
+___
 
 ### Install Mail App
 Open `Settings>Signature`
 - [x] Apply to all accounts
->- Set signature to 
-> ```
-> Viele Grüße
-> Anton Pusch
-> ```
+- `Viele Grüße Anton Pusch` Signature
+___
 
-Install Skype App
-Open `Settings>General`
->- ``Show Skype in the Windows notif‌ication area
-- [ ] 
+### Install Skype App
+
 Open `Settings>Appearance`
 >- Set Color to orange
 >- Set Modes to Use system setting
@@ -239,3 +228,49 @@ Open `Settings>Calling>Advanced`
 Open `Settings>Messaging`
 >- `Small` Text size
 - [x] Auto-download f‌iles
+___
+
+# Install other apps
+
+1. Install [Lenovo Vantage](https://www.microsoft.com/de-de/p/lenovo-vantage/9wzdncrfj4mv?activetab=pivot:overviewtab)
+
+1. Install [WhatsApp Desktop](https://www.microsoft.com/de-de/p/whatsapp-desktop/9nksqgp7f2nh?activetab=pivot:overviewtab) <br>
+Swtich to `Dark` Theme
+
+1. Install [Recuva](https://www.ccleaner.com/recuva/download)
+
+1. Install [7-Zip](https://www.7-zip.org/)
+
+1. Install [Adobe Reader](https://get.adobe.com/reader/)
+
+1. Install [QuickLook](https://www.microsoft.com/de-de/p/quicklook/9nv4bs3l1h4s?activetab=pivot:overviewtab)
+
+1. Install [AutoHotkey](https://www.autohotkey.com/)
+
+1. Install [Adobe Photoshop Express](https://www.microsoft.com/de-de/p/adobe-photoshop-express-image-editor-adjustments-filters-effects-borders/9wzdncrfj27n?activetab=pivot:overviewtab) <br>
+Set as default app for .jpg files
+
+1. Install [TreeSize](https://www.microsoft.com/de-de/p/treesize-free/9nblggh40881?activetab=pivot:overviewtab)
+
+1. Install [TileIconifier](https://github.com/Jonno12345/TileIconifier/releases)
+
+1. Install [Resource Hacker](http://www.angusj.com/resourcehacker/#download)
+
+1. Install [Discord](https://discord.com/new) <br>
+Disable startup shortcut
+
+1. Install [Windscribe](https://windscribe.com/download)
+
+1. Install [Minecraft Java Edition](https://www.minecraft.net/en-us/download/)
+
+1. Install [Minecraft Bedrock Edition](https://www.microsoft.com/de-de/p/minecraft-for-windows-10/9nblggh2jhxj)
+
+1. Install [Factorio](https://factorio.com/download)
+
+1. Install [ShareX](https://github.com/ShareX/ShareX/releases/)
+
+1. Install [Rainmeter](https://www.rainmeter.net/) <br>
+Install [Windows 10 Layout](Yetenol-Win10.rmskin) <br>
+Open `Taskbar>Rainmeter>Settings`
+- [x] Disable dragging
+If above fails, install [bundled pack](https://github.com/tjmarkham/win10widgets/releases/)
