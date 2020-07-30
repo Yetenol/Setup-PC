@@ -272,5 +272,5 @@ Disable startup shortcut
 1. Install [Rainmeter](https://www.rainmeter.net/) <br>
 Install [Windows 10 Layout](Yetenol-Win10.rmskin) <br>
 Open `Taskbar>Rainmeter>Settings`
-- [x] Disable dragging
+- [x] Disable dragging <br>
 If above fails, install [bundled pack](https://github.com/tjmarkham/win10widgets/releases/)
