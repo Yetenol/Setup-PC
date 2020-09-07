@@ -29,7 +29,7 @@ Open `Devices>Touchpad>Advanced gesture conf‌iguration`
 `Hide everything other than the app in focus` Down <br>
 `Forward navigation` Left <br>
 `Backward navigation` Right <br>
- 
+
 - Conf‌igure your four f‌inger gestures <br>
 `Play/pause` Taps <br>
 `Volume up` Up <br>
@@ -44,24 +44,36 @@ Open `Personalization>Colors`
 Open `Personalization>Start`
 - [ ] Show more tiles on Start
 - [ ] Show suggestions occasionally in Start
+- [x] Use Start full screen
 
 Open `Personalization>Taskbar>Select which icons appear on the taskbar`
 - [x] Always show all icons in the notif‌ication area
 - Hide Cortana search box via taskbar menu
 
+Open `Devices>Typing>Hardware keyboard`
+- [x] Show text suggestions as I type
+
 Open `Accounts>Email & accounts`
 - Add google account
 
-# Install essential apps
-### Open `File Explorer options`
-- `This PC` Open File Explorer to:
-- Open View tab
-- [ ] Hide extensions for known file types
-- [x] Use check boxes to select item
-- [x] Always show availability status
+# Local Group Policy Editor
+
+```
+gpedit.msc
+```
+
+Open `Computer Configuration>Administrative Templates>System>Filesystem`
+- [x] Enable Win32 long paths
+
+# Setup browsers
+
+### Assign Cortana search to default browser
+
+- Install [EdgeDeflector](https://github.com/da2x/EdgeDeflector/releases)
+- Search anything and select EdgeDeflector as default program
 ___
 
-### Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
+### Install [Edge Chromium](https://www.microsoft.com/de-de/edge) and [Brave](https://brave.com/)
 
 - Sign in to sync
 
@@ -76,62 +88,65 @@ Open `Privacy and services>Address bar`
 Open `Settings>Appearance`
 - `System default` Default theme
 
+Open `Settings>On Startup`
+- `Open a new tab` On startup
+
 Open `Settings>Site permissions>Notifications`
 - [ ] Ask before sending 
 
 Install plugins 
-> 1. Install [uBlock Origin](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak)
+> 1. Install [Dark Reader](https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc?h) <br>
+`Dev tools>Preview new design` <br>
+Import [Settings-File](Dark-Reader-Settings.json) (`Settings>Manage settings>Import Settings`)
+> 1. Install [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) [#](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak) <br>
+> Import [Settings-File](my-ublock-backup.txt) (`Settings>Restore from file`)
 > 1. Install [Chrometana - Redirect Bing Somewhere Better](https://chrome.google.com/webstore/detail/chrometana-redirect-bing/kaicbfmipfpfpjmlbpejaoaflfdnabnc)
 > 1. Install [Tabliss - A Beautiful New Tab](https://chrome.google.com/webstore/detail/tabliss-a-beautiful-new-t/hipekcciheckooncpjeljhnekcoolahp)
 > 1. Install [User-Agent Switcher](https://chrome.google.com/webstore/detail/user-agent-switcher/clddifkhlkcojbojppdojfeeikdkgiae)
 > 1. Install [Picture-in-Picture Extension (by Google)](https://chrome.google.com/webstore/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg)
-> 1. Install [I don't care about cookies](https://microsoftedge.microsoft.com/addons/detail/i-dont-care-about-cookie/oholpbloipjbbhlhohaebmieiiieioal)
+> 1. Install [I don't care about cookies](https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja) [#](https://microsoftedge.microsoft.com/addons/detail/i-dont-care-about-cookie/oholpbloipjbbhlhohaebmieiiieioal)
 > 1. Install [Imagus](https://chrome.google.com/webstore/detail/imagus/immpkjjlgappgfkkfieppnmlhakdmaab)
-> 1. Install [Office](https://microsoftedge.microsoft.com/addons/detail/office/gggmmkjegpiggikcnhidnjjhmicpibll)
-> 1. Install [Download All Images](https://microsoftedge.microsoft.com/addons/detail/download-all-images/focinmnfmbmhknhdaamhppgdhahnbgif) <br>
+> 1. Install [Office](https://chrome.google.com/webstore/detail/office/ndjpnladcallmjemlbaebfadecfhkepb) [#](https://microsoftedge.microsoft.com/addons/detail/office/gggmmkjegpiggikcnhidnjjhmicpibll) <br>
 `On click` Site access
-> 1. Install [Honey](https://microsoftedge.microsoft.com/addons/detail/honey/amnbcmdbanbkjhnfoeceemmmdiepnbpp) <br>
+> 1. Install [Download All Images](https://chrome.google.com/webstore/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm) [#](https://microsoftedge.microsoft.com/addons/detail/download-all-images/focinmnfmbmhknhdaamhppgdhahnbgif) <br>
 `On click` Site access
-> 1. Install [Open in VLC™ media player](https://microsoftedge.microsoft.com/addons/detail/open-in-vlc%E2%84%A2-media-player/hjfcjapkfahlmlefedkkpbbkeddpnnlc) <br>
+> 1. Install [Honey](https://chrome.google.com/webstore/detail/honey/bmnlcjabgnpnenekpadlanbbkooimhnj) [#](https://microsoftedge.microsoft.com/addons/detail/honey/amnbcmdbanbkjhnfoeceemmmdiepnbpp) <br>
 `On click` Site access
-> 1. Install [Chameleon](https://chrome.google.com/webstore/detail/chameleon/dmpojjilddefgnhiicjcmhbkjgbbclob) <br>
-`On specific sites` Site access <br>
-Add allowed site `https://www.youtube.com/*`
-> 1. Install [Dark Reader](https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc?h) <br>
-> Invert list only:
-> ```
-> www.google.com/search
-> www.amazon.de
-> github.com
-> displate.com
-> www.reddit.com
-> accounts.google.com
-> mail.google.com
-> contacts.google.com
-> fahrkarten.bahn.de
-> www.howtogeek.com
-> ```
+> 1. Install [Open in VLC™ media player](https://chrome.google.com/webstore/detail/open-in-vlc-media-player/ihpiinojhnfhpdmmacgmpoonphhimkaj) [#](https://microsoftedge.microsoft.com/addons/detail/open-in-vlc%E2%84%A2-media-player/hjfcjapkfahlmlefedkkpbbkeddpnnlc) <br>
+`On click` Site access
+
 
 Setup keyboard shortcuts
 > `Alt + D` _Dark Reader :_ Activate the extension <br>
 > `Alt + Shift + D` _Dark Reader :_ Toggle current site <br>
 > `Alt + I` _Download All Images :_ Activate the extension <br>
-> `Alt + o` _Office :_ Activate the extension <br>
-> `Alt + B` _uBlock Origin :_ Enter element picker mode <br>
-> `Alt + Z` _uBlock Origin :_ Enter element zapper mode <br>
-> `Alt + S` _Chameleon :_ Activate the extension <br>
+> `Alt + O` _Office :_ Activate the extension <br>
+> `Alt + U` _uBlock Origin :_ Activate the extention <br>
 > `Alt + P` _Picture-in-Picture :_ Activate the extension <br>
-> `Alt + U` _User-Agent Switcher :_ Activate the extension
+> `Alt + A` _User-Agent Switcher :_ Activate the extension
 ___
 
+
+
+# Install essential apps
+
+
+
+### Open `File Explorer options`
+- `This PC` Open File Explorer to:
+- Open View tab
+- [ ] Hide extensions for known file types
+- [x] Use check boxes to select item
+- [x] Always show availability status
+___
+
+
 ### Install [KeePass](https://keepass.info/download.html)
-- Install plugin [WinHelloUnlock](https://github.com/Angelelz/WinHelloUnlock/releases)
-- Setup fingerprint unlock
+- Install plugin [KeeAnywhere](https://github.com/Kyrodan/KeeAnywhere/releases) and add OneDrive account
+- Install plugin [WinHelloUnlock](https://github.com/Angelelz/WinHelloUnlock/releases) and setup fingerprint unlock
 
 Open `Tools>Options>Security`
 - `30` Lock Workspace after KeePass iniactivity (seconds):
-- [x] Lock workspace when minimizing main window to taskbar
-- [x] Lock workspace when minimizing main window to tray
 - [x] Lock workspace when locking the computer or switching the user
 - [x] Lock workspace when the computer is about to be suspended
 - [x] Lock workspace when the remote control mode changes
@@ -183,7 +198,7 @@ Open `Taskbar>Capture2Text>Settings>Hotkeys`
 - Set everything else to `<Unmapped>`
 ___
 
-### Install [Github](https://www.gitkraken.com/download/windows64)
+### Install [Gitkraken](https://www.gitkraken.com/download/windows64)
 - Sign in using Github
 ___
 
@@ -230,6 +245,17 @@ Open `Settings>Messaging`
 - [x] Auto-download f‌iles
 ___
 
+### Setup Start
+
+- Install [TileIconifier](https://github.com/Jonno12345/TileIconifier/releases)
+- Create custom shortcuts according to PowerPoint Layout
+    - `Other>Shortcut Target` Add desktop apps
+    - `Windows Store`, `URI`, `Steam`
+    - Name shortcuts ~1 ... ~99
+
+
+
+
 # Install other apps
 
 1. Install [Lenovo Vantage](https://www.microsoft.com/de-de/p/lenovo-vantage/9wzdncrfj4mv?activetab=pivot:overviewtab)
@@ -252,14 +278,14 @@ Set as default app for .jpg files
 
 1. Install [TreeSize](https://www.microsoft.com/de-de/p/treesize-free/9nblggh40881?activetab=pivot:overviewtab)
 
-1. Install [TileIconifier](https://github.com/Jonno12345/TileIconifier/releases)
-
 1. Install [Resource Hacker](http://www.angusj.com/resourcehacker/#download)
 
 1. Install [Discord](https://discord.com/new) <br>
 Disable startup shortcut
 
 1. Install [Windscribe](https://windscribe.com/download)
+
+1. Install [Samsung Flow](https://www.microsoft.com/de-de/p/samsung-flow/9nblggh5gb0m?rtc=1&wa=wsignin1.0&activetab=pivot:overviewtab)
 
 1. Install [Minecraft Java Edition](https://www.minecraft.net/en-us/download/)
 
