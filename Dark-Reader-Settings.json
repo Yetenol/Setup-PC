@@ -1,0 +1,58 @@
+{
+    "applyToListedOnly": true,
+    "automation": "",
+    "changeBrowserTheme": false,
+    "customThemes": [],
+    "enableForPDF": false,
+    "enableForProtectedPages": false,
+    "enabled": true,
+    "location": {
+        "latitude": 52.52,
+        "longitude": 13.405
+    },
+    "notifyOfNews": false,
+    "presets": [],
+    "previewNewDesign": true,
+    "siteList": [
+        "google.com/search",
+        "amazon.de",
+        "displate.com",
+        "reddit.com",
+        "accounts.google.com",
+        "mail.google.com",
+        "contacts.google.com",
+        "fahrkarten.bahn.de",
+        "howtogeek.com",
+        "markdownguide.org",
+        "github.com",
+        "youtube.com",
+        "tu.berlin",
+        "adk.de"
+    ],
+    "siteListEnabled": [],
+    "syncSettings": true,
+    "syncSitesFixes": false,
+    "theme": {
+        "mode": 1,
+        "brightness": 100,
+        "contrast": 100,
+        "grayscale": 0,
+        "sepia": 0,
+        "useFont": false,
+        "fontFamily": "Segoe UI",
+        "textStroke": 0,
+        "engine": "dynamicTheme",
+        "stylesheet": "",
+        "darkSchemeBackgroundColor": "#181a1b",
+        "darkSchemeTextColor": "#e8e6e3",
+        "lightSchemeBackgroundColor": "#dcdad7",
+        "lightSchemeTextColor": "#181a1b",
+        "scrollbarColor": "auto",
+        "selectionColor": "auto",
+        "styleSystemControls": true
+    },
+    "time": {
+        "activation": "18:00",
+        "deactivation": "9:00"
+    }
+}
