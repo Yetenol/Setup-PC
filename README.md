@@ -299,6 +299,8 @@ Disable startup shortcut
 
 1. Install [ShareX](https://github.com/ShareX/ShareX/releases/)
 
+1. Install [LidLock](https://download.cnet.com/Lid-Lock/3000-2094_4-76464070.html)
+
 1. Install [EarTrumpet](https://www.microsoft.com/de-de/p/eartrumpet/9nblggh516xp?activetab=pivot:overviewtab)
 
 1. Install [Rainmeter](https://www.rainmeter.net/) <br>
