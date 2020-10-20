@@ -292,4 +292,4 @@ Set as default app for .jpg files
 
  # Install Shell Tools
 
- - add [ShellTools](ShellTools/*) to path location
+ - add [ShellTools](ShellTools/) to path location
