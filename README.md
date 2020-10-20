@@ -288,8 +288,8 @@ Set as default app for .jpg files
 
 # Install Background Tools
 
-- see [BackgroundTools.md](BackgroundTools\BackgroundTools.md)
+- see [BackgroundTools.md](BackgroundTools/BackgroundTools.md)
 
  # Install Shell Tools
 
- - add [ShellTools](ShellTools\*) to path location
+ - add [ShellTools](ShellTools/*) to path location
