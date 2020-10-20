@@ -189,17 +189,6 @@ ___
 - Test `Fn + F12`
 ___
 
-### Install [Capture2Text](https://sourceforge.net/projects/capture2text/files/Capture2Text/)
-
-- Add start menu shortcut manually
-
-Open `Taskbar>Capture2Text>Settings>Hotkeys`
-- `Ctrl + Print Screen` Start OCR Capture
-- `Ctrl + Shift + Print Screen` Re Capture Last
-- `Alt + Print Screen` Text Line Capture:
-- Set everything else to `<Unmapped>`
-___
-
 ### Install [Gitkraken](https://www.gitkraken.com/download/windows64)
 - Sign in using Github
 ___
@@ -271,8 +260,6 @@ Swtich to `Dark` Theme
 
 1. Install [Adobe Reader](https://get.adobe.com/reader/)
 
-1. Install [QuickLook](https://www.microsoft.com/de-de/p/quicklook/9nv4bs3l1h4s?activetab=pivot:overviewtab)
-
 1. Install [AutoHotkey](https://www.autohotkey.com/)
 
 1. Install [Adobe Photoshop Express](https://www.microsoft.com/de-de/p/adobe-photoshop-express-image-editor-adjustments-filters-effects-borders/9wzdncrfj27n?activetab=pivot:overviewtab) <br>
@@ -283,7 +270,7 @@ Set as default app for .jpg files
 1. Install [Resource Hacker](http://www.angusj.com/resourcehacker/#download)
 
 1. Install [Discord](https://discord.com/new) <br>
-Disable startup shortcut
+- Don't run at startup
 
 1. Install [Windscribe](https://windscribe.com/download)
 
@@ -299,12 +286,10 @@ Disable startup shortcut
 
 1. Install [ShareX](https://github.com/ShareX/ShareX/releases/)
 
-1. Install [LidLock](https://download.cnet.com/Lid-Lock/3000-2094_4-76464070.html)
+# Install Background Tools
 
-1. Install [EarTrumpet](https://www.microsoft.com/de-de/p/eartrumpet/9nblggh516xp?activetab=pivot:overviewtab)
+- see [BackgroundTools.md](BackgroundTools\BackgroundTools.md)
 
-1. Install [Rainmeter](https://www.rainmeter.net/) <br>
-Install [Windows 10 Layout](Yetenol-Win10.rmskin) <br>
-Open `Taskbar>Rainmeter>Settings`
-- [x] Disable dragging <br>
-If above fails, install [bundled pack](https://github.com/tjmarkham/win10widgets/releases/)
+ # Install Shell Tools
+
+ - add [ShellTools](ShellTools\*) to path location
