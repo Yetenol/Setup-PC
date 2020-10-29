@@ -153,7 +153,6 @@ Open `Tools>Options>Security`
 - [x] Enter master key on secure desktop
 
 Open `Tools>Options>Interface`
-- [x] Minimize to tray instead of taskbar
 - [x] Drop to background after copying data to the clipboard
 - [x] Close button [X] minimizes main windows instead of terminating the application
 - [x] Focus entry list after a successful quick search
