@@ -27,7 +27,17 @@
         "github.com",
         "youtube.com",
         "tu.berlin",
-        "adk.de"
+        "adk.de",
+        "podcasts.google.com",
+        "www.der-postillon.com",
+        "tu-berlin.de",
+        "tu-sport.de",
+        "www.stw.berlin",
+        "tu-berlin.zoom.us",
+        "stackoverflow.com",
+        "zoom.us",
+        "tuport.sap.tu-berlin.de",
+        "jdhitsolutions.com"
     ],
     "siteListEnabled": [],
     "syncSettings": true,
