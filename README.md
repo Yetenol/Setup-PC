@@ -72,6 +72,7 @@ ___
 ### Install Visual Studio Code
 - Install **System Installer** from https://code.visualstudio.com/#alt-downloads
 - During setup progress tick _Open with_ options for context menu
+- Rename scipts in `C:\Program Files\Microsoft VS Code\bin`
 
 Open `Preferences>Settings`
 - ``onFocusChange`` Files: Auto Save
