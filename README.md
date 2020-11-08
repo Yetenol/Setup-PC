@@ -1,9 +1,9 @@
 # Table of Contents (How to setup my PC)
 
-[1) Software (without configuration)](#1\)-Software-(without-configuration))  
-[2) Software (with configuration)](#2\)-Software-(with-configuration))  
+[1) Software (without configuration)](#1-Software-(without-configuration))  
+[2) Software (with configuration)](#2-Software-(with-configuration))  
 
-[3) Windows Configurations](#3\)-Windows-Configurations)  
+[3) Windows Configurations](#3-Windows-Configurations)  
 [4) Browser](browser.md)  
 
 [5) Windows Settings](windows-settings.md)  
