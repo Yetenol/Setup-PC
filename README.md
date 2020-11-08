@@ -235,6 +235,11 @@ Open `Settings>Messaging`
 - [x] Auto-download f‌iles
 ___
 
+
+### Install [AutoHotkey](https://www.autohotkey.com/) <br>
+`code.exe    %1` [Registry:](#Edit-registry) Computer\HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\Edit\Command <br>
+`C:\Program Files\Microsoft VS Code` Add to [path enviroment variable](#Edit-path-enviroment-variable)
+
 ### Setup Start
 
 - Install [TileIconifier](https://github.com/Jonno12345/TileIconifier/releases)
@@ -259,7 +264,6 @@ Swtich to `Dark` Theme
 
 1. Install [Adobe Reader](https://get.adobe.com/reader/)
 
-1. Install [AutoHotkey](https://www.autohotkey.com/)
 
 1. Install [Adobe Photoshop Express](https://www.microsoft.com/de-de/p/adobe-photoshop-express-image-editor-adjustments-filters-effects-borders/9wzdncrfj27n?activetab=pivot:overviewtab) <br>
 Set as default app for .jpg files
@@ -292,3 +296,17 @@ Set as default app for .jpg files
  # Install Shell Tools
 
  - add [ShellTools](ShellTools/) to path location
+
+ # HowToDos
+
+ ### Edit path enviroment variable
+```
+rundll32 shell32.dll,Control_RunDLL sysdm.cpl,null,3
+```
+- Click `Enviroment Variables>User variables>Path>Edit>New`
+
+### Edit registry
+```
+regedit
+```
+- Enter registry hive (address of the setting)
