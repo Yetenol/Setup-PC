@@ -1,4 +1,4 @@
-[Home](../readme.md)
+[Home](../README.md)
 # Taskbar tools
 
 ## [Windows Tools](WindowTools.ahk)

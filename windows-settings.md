@@ -1,4 +1,4 @@
-[Home](readme.md)
+[Home](README.md)
 # 4) Windows Settings
 
 Open `System>Display`

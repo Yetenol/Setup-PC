@@ -1,4 +1,4 @@
-[Home](readme.md)
+[Home](README.md)
 # 4) Setup browsers
 
 ### Assign Cortana search to default browser
