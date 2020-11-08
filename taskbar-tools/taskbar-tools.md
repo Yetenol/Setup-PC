@@ -1,12 +1,13 @@
+[Home](../readme.md)
 # Taskbar tools
 
 ## [Windows Tools](WindowTools.ahk)
 
-- run at startup
+- run at [startup](../how-to-dos.md#edit-startup-apps)
 
 ## [Youtube Downloader](Youtube.ahk)
 
-- run at startup
+- run at [startup](../how-to-dos.md#edit-startup-apps)
 
 ## [Rainmeter](https://www.rainmeter.net/)
 
@@ -20,7 +21,7 @@
 
 ## [Capture2Text](https://sourceforge.net/projects/capture2text/files/Capture2Text/)
 
-- run at startup
+- run at [startup](../how-to-dos.md#edit-startup-apps)
 
 > Open `Taskbar>Capture2Text>Settings>Hotkeys`
 >- `Ctrl + Print Screen` Start OCR Capture
