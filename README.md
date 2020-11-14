@@ -74,8 +74,11 @@ ___
 - During setup progress tick _Open with_ options for context menu
 - Rename scipts in `C:\Program Files\Microsoft VS Code\bin`
 
-Open `Preferences>Settings`
+Open `File>Preferences>Settings>User>Commonly Used`
 - ``onFocusChange`` Files: Auto Save
+
+Open `File>Preferences>Settings>User>Text Editor>Formatting`
+- [x] Editor: Format On Save
 ___
 ### Install OneDrive
 - Sign in
