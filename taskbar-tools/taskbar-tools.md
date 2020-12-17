@@ -30,6 +30,8 @@
 
 ## [ShareX](https://github.com/ShareX/ShareX/releases/)
 
+- run at [startup](../how-to-dos.md#edit-startup-apps)
+
 > Open `Taskbar>ShareX>Hotkey settings`
 >- `Ctrl + Print Screen` Capture region
 >- `Print Screen` Capture entire screen
