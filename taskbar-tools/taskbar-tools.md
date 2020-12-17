@@ -24,10 +24,23 @@
 - run at [startup](../how-to-dos.md#edit-startup-apps)
 
 > Open `Taskbar>Capture2Text>Settings>Hotkeys`
->- `Ctrl + Print Screen` Start OCR Capture
->- `Ctrl + Shift + Print Screen` Re Capture Last
->- `Alt + Print Screen` Text Line Capture:
+>- `Alt + Print Screen` Start OCR Capture
+>- `Shift + Alt + Print Screen` Re Capture Last
 >- Set everything else to `<Unmapped>`
+
+## [ShareX](https://github.com/ShareX/ShareX/releases/)
+
+> Open `Taskbar>ShareX>Hotkey settings`
+>- `Ctrl + Print Screen` Capture region
+>- `Print Screen` Capture entire screen
+>- `Ctrl + Shift + Print Screen` Capture active window
+>- `Win + Insert` Start/Stop screen recording
+>- `Shift + Win + Insert` Start/Stop screen recording (GIF)
+
+> Open `Taskbar>ShareX>Application settings`
+>- [x] Use custom screenshot folder
+>- `%MyPictures%\Screenshots` Screenshot folder
+
 
 ## [LidLock](https://download.cnet.com/Lid-Lock/3000-2094_4-76464070.html)
 

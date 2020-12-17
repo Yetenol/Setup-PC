@@ -38,7 +38,6 @@ Don't run at [startup](how-to-dos.md#edit-startup-apps)
 1. Install [Minecraft Bedrock Edition](https://www.microsoft.com/de-de/p/minecraft-for-windows-10/9nblggh2jhxj)
 1. Install [Factorio](https://factorio.com/download)
 1. Install [AusweisApp](https://www.ausweisapp.bund.de/download/windows-und-mac/)
-1. Install [ShareX](https://github.com/ShareX/ShareX/releases/)
 
 
 
@@ -87,7 +86,7 @@ Open `Taskbar>OneDrive>More>Settings>Settings`
 - [ ] Save space and download files as I use them
 - [x] Let me use OneDrive to fetch any of my f‌iles on this PC
  Open `Backup` tab
-- [x] Automatically save screenshots I capture to OneDrive
+- [ ] Automatically save screenshots I capture to OneDrive
 
 Open `Explorer>Documents>Properties>Location`
 - Change location to OneDrive folder
