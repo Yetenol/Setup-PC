@@ -1,5 +1,10 @@
 #SingleInstance, force
 Menu, Tray, Icon, % A_WinDir "\System32\SHELL32.dll", 3 ; Shows a window icon in the system tray
+SetNumLockState, AlwaysOn
+
+#+r::
+Run, restartRainmeter.ps1.bat
+return
 
 Pause::
 SetTitleMatchMode, 3
