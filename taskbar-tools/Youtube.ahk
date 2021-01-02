@@ -131,10 +131,86 @@ Acc_Children(Acc) {
 	}
 }
 
+; ===== Global shortcuts: =====
+; Modifier keys:    # Win    ^ Ctrl    + Shift    ! Alt
+; Notifications flags:
+; - Syntax: TrayTip, Title, Text, , Flags
+; - Default icon: Keyboard icon
+; - e.g.: 0x1 + 0x10 = 0x11 Silent info
+;   0x1 Info icon
+;   0x2 Warning icon
+;   0x3 Error icon
+;   0x10 Silent
+;   0x20 Large icon
+
+#+Y::
+entirePlaylist := true
 #Y::
-url := GetActiveBrowserURL()
-if (IsURL(url))
-{
-    Run, cmd /c youtube-dl.exe %url% && timeout 3 >NUL, C:\Users\anton\Downloads\
+Url := GetActiveBrowserURL()
+Core := "youtube-dl.exe " . Url
+Core := (entirePlaylist) ? Core . " --yes-playlist" :  Core . " --no-playlist"
+Simulate := Core . " --simulate --no-warnings --newline "
+Download := Core . " --mark-watched --console-title --merge-output-format mp4 --no-playlist --restrict-filenames "
+
+OutputPath := "X:/OneDrive/Videos-E/Youtube/"
+if not (Url) {
+	TrayTip, No browser tab found, Try refreshing the page, , 0x3
+} else if not IsURL(Url) {
+	TrayTip, Invalid url, %url%, , 0x3
+} else {
+	TrayTip, Fetching information..., %Url%, , 0x10
+	if not (ExtractInformation(Simulate . "--dump-json")) {
+		TrayTip, No video found on tab, Try refreshing the page, , 0x3
+	} else {
+		Title := ExtractInformation(Simulate . "--get-title")
+		Duration := ExtractInformation(Simulate . "--get-duration", true)
+		Filename := ExtractInformation(Simulate . "--get-filename")
+
+
+		TrayTip, Downloading... [%Duration%], %Title%, , 0x10
+		Run, %Download%, %OutputPath%
+	}
 }
+entirePlaylist := false
 return
+
+ExtractInformation(information, singleLine = false) {
+	Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
+	Script := Shell.Exec(information) ; Launch the script, proceed immidiately
+	WinWait, ahk_exe youtube-dl.exe ; Hide the script as soon as visible
+	WinHide, ahk_exe youtube-dl.exe
+	;while !Script.Status ; Let the script finish
+	;	Sleep, 100
+	StdOut := Script.StdOut.ReadAll()
+	StdErr := Script.StdErr.ReadAll()
+	ErrLvl := (Script.Status == 2)
+	
+
+	if (ErrLvl || StdErr) { ; Script failed
+		Title := "Failure"
+		StdErr := StrReplace(StdErr, "ERROR: ")
+		if InStr(StdErr, "Unsupported URL:") {
+			StdErr := StrReplace(StdErr, "Unsupported URL:")
+			Title := "Unsupported URL"
+		}
+		if (StrLen(StdErr) <= 265)
+			TrayTip, %Title%, %StdErr%, , 0x3
+		else
+			MsgBox, 0x10, %Title%, %StdErr%
+	}
+	StdOut := (singleLine) ? StrReplace(StdOut, "`n") : StdOut ; remove line breaks
+	return StdOut
+}
+
+;	Command = cmd /c title nircmd-hide-me & nircmd win hide stitle nircmd-hide-me & youtube-dl.exe --simulate --dump-json --no-warnings --newline %EscapedUrl%
+
+;RunWait, youtube-dl.exe -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 --mark-watched --output "X:/OneDrive/Videos-E/Youtube/" %Url%
+
+;LButton::
+;MouseGetPos,,, MouseWin
+;SetTitleMatchMode, 2
+;WinGet, UniqueID,, New notification ahk_id %MouseWin% ahk_exe ShellExperienceHost.exe
+;if (UniqueID) {
+;    MsgBox, , , Success, 1
+;}
+;return
