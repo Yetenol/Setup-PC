@@ -175,16 +175,29 @@ entirePlaylist := false
 return
 
 ExtractInformation(information, singleLine = false) {
+	;Run, %ComSpec%,,, ConsolePID ; Launch  console
+	;WinWait, ahk_pid %ConsolePID% ; Wait for window
+	;DllCall("AttachConsole", "UInt", ConsolePID) ; Link the console to the output
+
 	Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
 	Script := Shell.Exec(information) ; Launch the script, proceed immidiately
 	WinWait, ahk_exe youtube-dl.exe ; Hide the script as soon as visible
 	WinHide, ahk_exe youtube-dl.exe
-	;while !Script.Status ; Let the script finish
-	;	Sleep, 100
+
+	while !Script.Status { ; Script is running
+		Sleep, 100
+		StdOut := Script.StdOut.ReadLine()
+		StdErr := Script.StdErr.ReadLine()
+		if (StdOut) 
+			MsgBox,, StdOut, %StdOut%, 1
+		if (StdErr) 
+			MsgBox,, StdErr, %StdErr%, 1
+	}
+	
+	; Get all output
 	StdOut := Script.StdOut.ReadAll()
 	StdErr := Script.StdErr.ReadAll()
-	ErrLvl := (Script.Status == 2)
-	
+	ErrLvl := (Script.Status == 2)	
 
 	if (ErrLvl || StdErr) { ; Script failed
 		Title := "Failure"
@@ -199,6 +212,9 @@ ExtractInformation(information, singleLine = false) {
 			MsgBox, 0x10, %Title%, %StdErr%
 	}
 	StdOut := (singleLine) ? StrReplace(StdOut, "`n") : StdOut ; remove line breaks
+
+	;DllCall("FreeConsole") ; Stop console
+	;Process, Close, ConsolePID
 	return StdOut
 }
 
