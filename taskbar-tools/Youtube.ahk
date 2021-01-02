@@ -149,7 +149,7 @@ entirePlaylist := true
 Url := GetActiveBrowserURL()
 Core := "youtube-dl.exe " . Url
 Core := (entirePlaylist) ? Core . " --yes-playlist" :  Core . " --no-playlist"
-Simulate := Core . " --simulate --no-warnings --newline "
+Simulate := Core . " --simulate --no-warnings "
 Download := Core . " --mark-watched --console-title --merge-output-format mp4 --no-playlist --restrict-filenames "
 
 OutputPath := "X:/OneDrive/Videos-E/Youtube/"
@@ -164,37 +164,41 @@ if not (Url) {
 	} else {
 		Title := ExtractInformation(Simulate . "--get-title")
 		Duration := ExtractInformation(Simulate . "--get-duration", true)
-		Filename := ExtractInformation(Simulate . "--get-filename")
+		Filename := ExtractInformation(Simulate . "--get-filename", true)
+
 
 
 		TrayTip, Downloading... [%Duration%], %Title%, , 0x10
-		Run, %Download%, %OutputPath%
+		
+		Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
+		Script := Shell.Exec(Download) ; Launch the script, proceed immidiately
+		while !(Script.StdOut.AtEndOfStream) { ; Script is running
+			Sleep, 100
+			StdOut := Script.StdOutReadLine()
+
+			StrReplace(StdOut, Filename, "File")
+
+			if (RegExMatch(StdOut, "\[download\]. File has already been downloaded and merged") {
+				TrayTip, % "Already downloaded",  
+			}
+
+
+			FileAppend, % Script.StdOut.ReadLine() . "`n", % "D:\Dev\Setup-PC\taskbar-tools\out.txt"
+		}
+		MsgBox,, StdErr, % Script.StdErr.ReadAll()
+
+		;Run, %Download% ;, %OutputPath%
 	}
 }
 entirePlaylist := false
 return
 
 ExtractInformation(information, singleLine = false) {
-	;Run, %ComSpec%,,, ConsolePID ; Launch  console
-	;WinWait, ahk_pid %ConsolePID% ; Wait for window
-	;DllCall("AttachConsole", "UInt", ConsolePID) ; Link the console to the output
-
-	;FileAppend, HelloWorld!`n, D:\Dev\Setup-PC\taskbar-tools\debug.txt
 
 	Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
 	Script := Shell.Exec(information) ; Launch the script, proceed immidiately
 	WinWait, ahk_exe youtube-dl.exe ; Hide the script as soon as visible
 	WinHide, ahk_exe youtube-dl.exe
-
-	;while !Script.Status { ; Script is running
-	;	Sleep, 100
-		;StdOut := Script.StdOut.ReadLine()
-		;StdErr := Script.StdErr.ReadLine()
-		;if (StdOut) 
-			;FileAppend, %StdOut%`n, D:\Dev\Setup-PC\taskbar-tools\out.txt
-		;if (StdErr) 
-			;FileAppend, %StdErr%`n, D:\Dev\Setup-PC\taskbar-tools\err.txt
-	;}
 	
 	; Get all output
 	StdOut := Script.StdOut.ReadAll()
@@ -214,10 +218,6 @@ ExtractInformation(information, singleLine = false) {
 			MsgBox, 0x10, %Title%, %StdErr%
 	}
 	StdOut := (singleLine) ? StrReplace(StdOut, "`n") : StdOut ; remove line breaks
-
-	;MsgBox, Wait
-	;DllCall("FreeConsole") ; Stop console
-	;Process, Close, ConsolePID
 	return StdOut
 }
 
