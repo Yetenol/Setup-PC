@@ -179,20 +179,22 @@ ExtractInformation(information, singleLine = false) {
 	;WinWait, ahk_pid %ConsolePID% ; Wait for window
 	;DllCall("AttachConsole", "UInt", ConsolePID) ; Link the console to the output
 
+	;FileAppend, HelloWorld!`n, D:\Dev\Setup-PC\taskbar-tools\debug.txt
+
 	Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
 	Script := Shell.Exec(information) ; Launch the script, proceed immidiately
 	WinWait, ahk_exe youtube-dl.exe ; Hide the script as soon as visible
 	WinHide, ahk_exe youtube-dl.exe
 
-	while !Script.Status { ; Script is running
-		Sleep, 100
-		StdOut := Script.StdOut.ReadLine()
-		StdErr := Script.StdErr.ReadLine()
-		if (StdOut) 
-			MsgBox,, StdOut, %StdOut%, 1
-		if (StdErr) 
-			MsgBox,, StdErr, %StdErr%, 1
-	}
+	;while !Script.Status { ; Script is running
+	;	Sleep, 100
+		;StdOut := Script.StdOut.ReadLine()
+		;StdErr := Script.StdErr.ReadLine()
+		;if (StdOut) 
+			;FileAppend, %StdOut%`n, D:\Dev\Setup-PC\taskbar-tools\out.txt
+		;if (StdErr) 
+			;FileAppend, %StdErr%`n, D:\Dev\Setup-PC\taskbar-tools\err.txt
+	;}
 	
 	; Get all output
 	StdOut := Script.StdOut.ReadAll()
@@ -213,6 +215,7 @@ ExtractInformation(information, singleLine = false) {
 	}
 	StdOut := (singleLine) ? StrReplace(StdOut, "`n") : StdOut ; remove line breaks
 
+	;MsgBox, Wait
 	;DllCall("FreeConsole") ; Stop console
 	;Process, Close, ConsolePID
 	return StdOut
