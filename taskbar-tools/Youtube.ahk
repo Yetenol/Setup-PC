@@ -26,6 +26,8 @@ LegacyBrowsers := "IEFrame,OperaWindowClass"
 
 StrQuotes = "
 DownloadPath := "X:/OneDrive/Videos-E/Youtube/"
+LogStdOutFile := "D:\Dev\Setup-PC\taskbar-tools\out.log"
+LogStdErrFile := "D:\Dev\Setup-PC\taskbar-tools\err.log"
 
 ; Download currently open video tab (Win + Y)
 #+Y::
@@ -59,24 +61,28 @@ if not (Url) {
 			? "Downloading pl... [" Duration "]" 
 			: "Downloading vd... [" Duration "]", % Title, , 0x10
 		
+		FileDelete, % LogStdOutFile
+		FileDelete, % LogStdErrFile
+
+
 		Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
 		Script := Shell.Exec(Download) ; Launch the script, proceed immidiately
 		while !(Script.StdOut.AtEndOfStream) { ; Script is running
 			Sleep, 100
+		
 			StdOut := Script.StdOut.ReadLine()
+			StdErr := Script.StdOut.ReadLine()
+			FileAppend, % StdOut "`n", % LogStdOutFile
+			FileAppend, % StdErr "`n", % LogStdErrFile
+
+			ShowErrorMessage(StdErr)
 
 			StrReplace(StdOut, Filename, "File")
 
 			if (RegExMatch(StdOut, "\[download\]. File has already been downloaded and merged")) {
 				TrayTip, % "Already downloaded",  
 			}
-
-
-			FileAppend, % Script.StdOut.ReadLine() . "`n", % "D:\Dev\Setup-PC\taskbar-tools\out.txt"
 		}
-		MsgBox,, StdErr, % Script.StdErr.ReadAll()
-
-		;Run, %Download% ;, %DownloadPath%
 	}
 }
 entirePlaylist := false
@@ -108,6 +114,15 @@ ExtractInformation(information, singleLine = false) {
 	}
 	StdOut := (singleLine) ? StrReplace(StdOut, "`n") : StdOut ; remove line breaks
 	return StdOut
+}
+
+ShowErrorMessage(StdErr) {
+	if (StdErr) {
+		if (StrLen(StdErr) <= 265)
+			TrayTip, % Title, % StdErr, , 0x3
+		else
+			MsgBox, 0x10, % Title, % StdErr
+	}
 }
 
 ;	Command = cmd /c title nircmd-hide-me & nircmd win hide stitle nircmd-hide-me & youtube-dl.exe --simulate --dump-json --no-warnings --newline %EscapedUrl%
