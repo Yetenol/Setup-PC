@@ -86,25 +86,45 @@ entirePlaylist := false
 return
 
 YoutubeDl(isSimulation, options, singleLine = false) {
-	global Simulate
-	global Download
+	global Simulate, Download, LogStdOutFile, LogStdErrFile
 	isSimulation := not ((isSimulation = "D") || (isSimulation = "Download"))
 	options := (isSimulation) ? Simulate options : Download options
 
+	FileDelete, % LogStdOutFile
+	FileDelete, % LogStdErrFile
+
+	StdOutAll := ""
+
 	Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
 	Script := Shell.Exec(options) ; Launch the script, proceed immidiately
-	WinWait, ahk_exe youtube-dl.exe ; Hide the script as soon as visible
-	WinHide, ahk_exe youtube-dl.exe
-	
-	; Get all output
-	StdOut := Script.StdOut.ReadAll()
-	StdErr := Script.StdErr.ReadAll()
+	if (isSimulation) {
+		WinWait, ahk_exe youtube-dl.exe ; Hide the script as soon as visible
+		WinHide, ahk_exe youtube-dl.exe
+	}
+	loop { ; Script is running
+		StdOut := Script.StdOut.ReadLine()
+		StdErr := Script.StdErr.ReadLine()
+		if (StdOut || StdErr) {
+			FileAppend, % StdOutLine "`n", % LogStdOutFile
+			FileAppend, % StdErrLine "`n", % LogStdErrFile
+			StdOutAll := StdOutAll StdOut
+
+			ShowErrorMessage(StdErr)
+			if (singleLine && StdOut) {
+				return StdOut
+			}
+		}
+
+		if (!Script.Status || Script.StdOut.AtEndOfStream || Script.StdOut.AtEndOfStream) {
+			break
+		}
+		Sleep, 100
+		;StrReplace(StdOut, Filename, "File")
+	}
 	ErrLvl := (Script.Status == 2)	
 
 	if (ErrLvl || StdErr) { ; Script failed
-		ShowErrorMessage(StdErr)
 	}
-	StdOut := (singleLine) ? StrReplace(StdOut, "`n") : StdOut ; remove line breaks
 	return StdOut
 }
 
