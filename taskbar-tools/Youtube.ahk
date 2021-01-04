@@ -48,12 +48,12 @@ if not (Url) {
 	TrayTip, Invalid url, %url%, , 0x3
 } else {
 	TrayTip, Fetching information..., %Url%, , 0x10
-	if not (ExtractInformation(Simulate . "--dump-json")) {
+	if not (YoutubeDl("Simulate", "--dump-json")) {
 		TrayTip, No video found on tab, Try refreshing the page, , 0x3
 	} else {
-		Title := ExtractInformation(Simulate . "--get-title")
-		Duration := ExtractInformation(Simulate . "--get-duration", true)
-		Filename := ExtractInformation(Simulate . "--get-filename", true)
+		Title := YoutubeDl("Simulate", "--get-title")
+		Duration := YoutubeDl("Simulate", "--get-duration", true)
+		Filename := YoutubeDl("Simulate", "--get-filename", true)
 
 
 
@@ -85,10 +85,14 @@ if not (Url) {
 entirePlaylist := false
 return
 
-ExtractInformation(information, singleLine = false) {
+YoutubeDl(isSimulation, options, singleLine = false) {
+	global Simulate
+	global Download
+	isSimulation := not ((isSimulation = "D") || (isSimulation = "Download"))
+	options := (isSimulation) ? Simulate options : Download options
 
 	Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
-	Script := Shell.Exec(information) ; Launch the script, proceed immidiately
+	Script := Shell.Exec(options) ; Launch the script, proceed immidiately
 	WinWait, ahk_exe youtube-dl.exe ; Hide the script as soon as visible
 	WinHide, ahk_exe youtube-dl.exe
 	
@@ -98,16 +102,7 @@ ExtractInformation(information, singleLine = false) {
 	ErrLvl := (Script.Status == 2)	
 
 	if (ErrLvl || StdErr) { ; Script failed
-		Title := "Failure"
-		StdErr := StrReplace(StdErr, "ERROR: ")
-		if InStr(StdErr, "Unsupported URL:") {
-			StdErr := StrReplace(StdErr, "Unsupported URL:")
-			Title := "Unsupported URL"
-		}
-		if (StrLen(StdErr) <= 265)
-			TrayTip, %Title%, %StdErr%, , 0x3
-		else
-			MsgBox, 0x10, %Title%, %StdErr%
+		ShowErrorMessage(StdErr)
 	}
 	StdOut := (singleLine) ? StrReplace(StdOut, "`n") : StdOut ; remove line breaks
 	return StdOut
