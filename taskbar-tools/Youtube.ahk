@@ -33,12 +33,12 @@ LogStdErrFile := "D:\Dev\Setup-PC\taskbar-tools\err.log"
 #+Y::
 ; Download currently open playlist tab (Win + Shift +Y)
 #Y::
-entirePlaylist := not GetKeyState("Shift")
+entirePlaylist := GetKeyState("Shift")
 Url := GetActiveBrowserURL()
 Core := "youtube-dl.exe " . Url
 Core := (entirePlaylist) 
-	? Core . " --yes-playlist --output " StrQuotes DownloadPath "%(uploader)s/%(title)s %(id)s %(upload_date)s.%(ext)s" StrQuotes " "
-	: Core . " --no-playlist  --output " StrQuotes DownloadPath "%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s %(id)s %(upload_date)s.%(ext)s" StrQuotes " "
+	? Core . " --no-playlist  --output " StrQuotes DownloadPath "%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s %(id)s %(upload_date)s.%(ext)s" StrQuotes " "
+	: Core . " --yes-playlist --output " StrQuotes DownloadPath "%(uploader)s/%(title)s %(id)s %(upload_date)s.%(ext)s" StrQuotes " "
 Simulate := Core . " --simulate --no-warnings "
 Download := Core . " --mark-watched --console-title --merge-output-format mp4 "
 
@@ -79,9 +79,6 @@ if not (Url) {
 
 			StrReplace(StdOut, Filename, "File")
 
-			if (RegExMatch(StdOut, "\[download\]. File has already been downloaded and merged")) {
-				TrayTip, % "Already downloaded",  
-			}
 		}
 	}
 }
@@ -118,10 +115,14 @@ ExtractInformation(information, singleLine = false) {
 
 ShowErrorMessage(StdErr) {
 	if (StdErr) {
-		if (StrLen(StdErr) <= 265)
-			TrayTip, % Title, % StdErr, , 0x3
+		RegExMatch(StdErr, "^\[(?<Title>.*)\] (?<Text>.*)$", Group)
+		Title := (GroupTitle) ? GroupTitle : "Error"
+		Text := (GroupText) ? GroupText : StdErr
+
+		if (StrLen(Text) <= 130)
+			TrayTip, % Title, % Text, , 0x3
 		else
-			MsgBox, 0x10, % Title, % StdErr
+			MsgBox, 0x10, % Title, % Text
 	}
 }
 
