@@ -24,18 +24,22 @@ LegacyBrowsers := "IEFrame,OperaWindowClass"
 ;   0x10 Silent
 ;   0x20 Large icon
 
+StrQuotes = "
+DownloadPath := "X:/OneDrive/Videos-E/Youtube/"
+
 ; Download currently open video tab (Win + Y)
 #+Y::
-entirePlaylist := true
 ; Download currently open playlist tab (Win + Shift +Y)
 #Y::
+entirePlaylist := not GetKeyState("Shift")
 Url := GetActiveBrowserURL()
 Core := "youtube-dl.exe " . Url
-Core := (entirePlaylist) ? Core . " --yes-playlist" :  Core . " --no-playlist"
+Core := (entirePlaylist) 
+	? Core . " --yes-playlist --output " StrQuotes DownloadPath "%(uploader)s/%(title)s %(id)s %(upload_date)s.%(ext)s" StrQuotes " "
+	: Core . " --no-playlist  --output " StrQuotes DownloadPath "%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s %(id)s %(upload_date)s.%(ext)s" StrQuotes " "
 Simulate := Core . " --simulate --no-warnings "
-Download := Core . " --mark-watched --console-title --merge-output-format mp4 --no-playlist --restrict-filenames "
+Download := Core . " --mark-watched --console-title --merge-output-format mp4 "
 
-OutputPath := "X:/OneDrive/Videos-E/Youtube/"
 if not (Url) {
 	TrayTip, No browser tab found, Try refreshing the page, , 0x3
 } else if not IsURL(Url) {
@@ -51,7 +55,9 @@ if not (Url) {
 
 
 
-		TrayTip, Downloading... [%Duration%], %Title%, , 0x10
+		TrayTip, % (entirePlaylist) 
+			? "Downloading pl... [" Duration "]" 
+			: "Downloading vd... [" Duration "]", % Title, , 0x10
 		
 		Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
 		Script := Shell.Exec(Download) ; Launch the script, proceed immidiately
@@ -70,7 +76,7 @@ if not (Url) {
 		}
 		MsgBox,, StdErr, % Script.StdErr.ReadAll()
 
-		;Run, %Download% ;, %OutputPath%
+		;Run, %Download% ;, %DownloadPath%
 	}
 }
 entirePlaylist := false
