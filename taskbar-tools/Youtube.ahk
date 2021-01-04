@@ -15,7 +15,7 @@ LegacyBrowsers := "IEFrame,OperaWindowClass"
 ; ===== Global shortcuts: =====
 ; Modifier keys:    # Win    ^ Ctrl    + Shift    ! Alt
 ; Notifications flags:
-; - Syntax: TrayTip, Title, Text, , Flags
+; - Syntax: ;TrayTip, Title, Text, , Flags
 ; - Default icon: Keyboard icon
 ; - e.g.: 0x1 + 0x10 = 0x11 Silent info
 ;   0x1 Info icon
@@ -43,23 +43,21 @@ Simulate := Core . " --simulate --no-warnings "
 Download := Core . " --mark-watched --console-title --merge-output-format mp4 "
 
 if not (Url) {
-	TrayTip, No browser tab found, Try refreshing the page, , 0x3
+	;TrayTip, No browser tab found, Try refreshing the page, , 0x3
 } else if not IsURL(Url) {
-	TrayTip, Invalid url, %url%, , 0x3
+	;TrayTip, Invalid url, %url%, , 0x3
 } else {
-	TrayTip, Fetching information..., %Url%, , 0x10
+	;TrayTip, Fetching information..., %Url%, , 0x10
 	if not (YoutubeDl("Simulate", "--dump-json")) {
-		TrayTip, No video found on tab, Try refreshing the page, , 0x3
+		;TrayTip, No video found on tab, Try refreshing the page, , 0x3
 	} else {
 		Title := YoutubeDl("Simulate", "--get-title")
 		Duration := YoutubeDl("Simulate", "--get-duration", true)
 		Filename := YoutubeDl("Simulate", "--get-filename", true)
 
-
-
-		TrayTip, % (entirePlaylist) 
-			? "Downloading pl... [" Duration "]" 
-			: "Downloading vd... [" Duration "]", % Title, , 0x10
+		;TrayTip, % (entirePlaylist) 
+		;	? "Downloading pl... [" Duration "]" 
+		;	: "Downloading vd... [" Duration "]", % Title, , 0x10
 		
 		FileDelete, % LogStdOutFile
 		FileDelete, % LogStdErrFile
@@ -71,7 +69,7 @@ if not (Url) {
 			Sleep, 100
 		
 			StdOut := Script.StdOut.ReadLine()
-			StdErr := Script.StdOut.ReadLine()
+			StdErr := Script.StdErr.ReadLine()
 			FileAppend, % StdOut "`n", % LogStdOutFile
 			FileAppend, % StdErr "`n", % LogStdErrFile
 
@@ -86,14 +84,13 @@ entirePlaylist := false
 return
 
 YoutubeDl(isSimulation, options, singleLine = false) {
-	global Simulate, Download, LogStdOutFile, LogStdErrFile
+	global Simulate
+	global Download
+	global LogStdOutFile
+	global LogStdErrFile
+	
 	isSimulation := not ((isSimulation = "D") || (isSimulation = "Download"))
 	options := (isSimulation) ? Simulate options : Download options
-
-	FileDelete, % LogStdOutFile
-	FileDelete, % LogStdErrFile
-
-	StdOutAll := ""
 
 	Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
 	Script := Shell.Exec(options) ; Launch the script, proceed immidiately
@@ -101,13 +98,22 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 		WinWait, ahk_exe youtube-dl.exe ; Hide the script as soon as visible
 		WinHide, ahk_exe youtube-dl.exe
 	}
+
+	FileDelete, % LogStdOutFile
+	FileDelete, % LogStdErrFile
+	StdOutAll := ""
+
 	loop { ; Script is running
 		StdOut := Script.StdOut.ReadLine()
 		StdErr := Script.StdErr.ReadLine()
 		if (StdOut || StdErr) {
-			FileAppend, % StdOutLine "`n", % LogStdOutFile
-			FileAppend, % StdErrLine "`n", % LogStdErrFile
-			StdOutAll := StdOutAll StdOut
+			if (StdOut) {
+				FileAppend, % StdOut "`n", % LogStdOutFile
+				StdOutAll := StdOutAll StdOut
+			}
+			if (StdErr) {
+				FileAppend, % StdErr "`n", % LogStdErrFile
+			}
 
 			ShowErrorMessage(StdErr)
 			if (singleLine && StdOut) {
@@ -125,7 +131,7 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 
 	if (ErrLvl || StdErr) { ; Script failed
 	}
-	return StdOut
+	return StdOutAll
 }
 
 ShowErrorMessage(StdErr) {
@@ -134,10 +140,11 @@ ShowErrorMessage(StdErr) {
 		Title := (GroupTitle) ? GroupTitle : "Error"
 		Text := (GroupText) ? GroupText : StdErr
 
-		if (StrLen(Text) <= 130)
+		if (StrLen(Text) <= 130) {
 			TrayTip, % Title, % Text, , 0x3
-		else
+		} else {
 			MsgBox, 0x10, % Title, % Text
+		}
 	}
 }
 
