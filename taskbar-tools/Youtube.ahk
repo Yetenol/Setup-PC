@@ -87,19 +87,8 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 	FileDelete, % LogStdErrFile
 	StdOutAll := ""
 
-	if not (isSimulation) {
-		TrayTip, % "before"
-	}
-
-
-
 	loop { ; Script is running
 		Sleep, 100
-
-		if not (isSimulation) {
-			TrayTip, % "loop"
-		}
-
 
 		StdOut := Script.StdOut.ReadLine()
 		if (StdOut) {
@@ -112,27 +101,19 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 			}
 		}
 
-		if not (isSimulation) {
-			TrayTip, % "StdOut", % StdOut
+		if not (Script.StdErr.AtEndOfStream) {
+			StdErr := Script.StdErr.ReadLine()
+			if (StdErr) {
+				FileAppend, % StdErr "`n", % LogStdErrFile
+				ShowErrorMessage(StdErr)
+			}
 		}
-
-		StdErr := Script.StdErr.ReadLine()
-		if (StdErr) {
-			FileAppend, % StdErr "`n", % LogStdErrFile
-			ShowErrorMessage(StdErr)
-		}
-
-		if not (isSimulation) {
-			TrayTip, % "StdErr", % StdErr
-		}
-
 
 		if not (Script.Status = 0) { ; Script finished
 			break
 		}
-		;StrReplace(StdOut, Filename, "File")
 	}
-	
+
 	if (Script.Status = 2) { ; Script failed
 		ShowErrorMessage("[Failure] Youtube-dl finished with an unknown error!")
 	}
