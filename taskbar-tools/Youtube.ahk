@@ -55,29 +55,11 @@ if not (Url) {
 		Duration := YoutubeDl("Simulate", "--get-duration", true)
 		Filename := YoutubeDl("Simulate", "--get-filename", true)
 
-		;TrayTip, % (entirePlaylist) 
-		;	? "Downloading pl... [" Duration "]" 
-		;	: "Downloading vd... [" Duration "]", % Title, , 0x10
+		TrayTip, % (entirePlaylist) 
+			? "Downloading pl... [" Duration "]" 
+			: "Downloading vd... [" Duration "]", % Title, , 0x10
 		
-		FileDelete, % LogStdOutFile
-		FileDelete, % LogStdErrFile
-
-
-		Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
-		Script := Shell.Exec(Download) ; Launch the script, proceed immidiately
-		while !(Script.StdOut.AtEndOfStream) { ; Script is running
-			Sleep, 100
-		
-			StdOut := Script.StdOut.ReadLine()
-			StdErr := Script.StdErr.ReadLine()
-			FileAppend, % StdOut "`n", % LogStdOutFile
-			FileAppend, % StdErr "`n", % LogStdErrFile
-
-			ShowErrorMessage(StdErr)
-
-			StrReplace(StdOut, Filename, "File")
-
-		}
+		YoutubeDl("Download","")
 	}
 }
 entirePlaylist := false
@@ -94,8 +76,8 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 
 	Shell := ComObjCreate("WScript.Shell") ; Create a new shell environment
 	Script := Shell.Exec(options) ; Launch the script, proceed immidiately
+	WinWait, ahk_exe youtube-dl.exe ; Hide the script as soon as visible
 	if (isSimulation) {
-		WinWait, ahk_exe youtube-dl.exe ; Hide the script as soon as visible
 		WinHide, ahk_exe youtube-dl.exe
 	}
 
@@ -103,34 +85,63 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 	FileDelete, % LogStdErrFile
 	StdOutAll := ""
 
-	loop { ; Script is running
-		StdOut := Script.StdOut.ReadLine()
-		StdErr := Script.StdErr.ReadLine()
-		if (StdOut || StdErr) {
-			if (StdOut) {
-				FileAppend, % StdOut "`n", % LogStdOutFile
-				StdOutAll := StdOutAll StdOut
-			}
-			if (StdErr) {
-				FileAppend, % StdErr "`n", % LogStdErrFile
-			}
+	if not (isSimulation) {
+		TrayTip, % "before"
+	}
 
-			ShowErrorMessage(StdErr)
-			if (singleLine && StdOut) {
+
+
+	loop { ; Script is running
+		Sleep, 100
+
+		if not (isSimulation) {
+			TrayTip, % "loop"
+		}
+
+
+		StdOut := Script.StdOut.ReadLine()
+		if (StdOut) {
+			FileAppend, % StdOut "`n", % LogStdOutFile
+			StdOutAll := StdOutAll StdOut
+			if (singleLine) {
+				Script.StdOut.ReadAll()
+				Script.StdErr.ReadAll()
 				return StdOut
 			}
 		}
 
-		if (!Script.Status || Script.StdOut.AtEndOfStream || Script.StdOut.AtEndOfStream) {
+		if not (isSimulation) {
+			TrayTip, % "StdOut", % StdOut
+		}
+/*
+		StdErr := Script.StdErr.ReadLine()
+		if (StdErr) {
+			FileAppend, % StdErr "`n", % LogStdErrFile
+			ShowErrorMessage(StdErr)
+		}
+
+		if not (isSimulation) {
+			TrayTip, % "StdErr", % StdErr
+		}
+*/
+
+		if not (Script.Status = 0) { ; Script finished
+			if not (isSimulation) {
+				TrayTip, % "Downlaod finished", % " "StdOut
+			}
+			Script.StdOut.ReadAll()
+			Script.StdErr.ReadAll()
 			break
 		}
-		Sleep, 100
 		;StrReplace(StdOut, Filename, "File")
 	}
 	ErrLvl := (Script.Status == 2)	
 
-	if (ErrLvl || StdErr) { ; Script failed
+	if (ErrLvl) { ; Script failed
+		ShowErrorMessage("[Failure] Youtube-dl finished with an unknown error!")
 	}
+	Script.StdOut.ReadAll()
+	Script.StdErr.ReadAll()
 	return StdOutAll
 }
 
