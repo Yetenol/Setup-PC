@@ -101,13 +101,12 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 			}
 		}
 
-		if not (Script.StdErr.AtEndOfStream) {
-			StdErr := Script.StdErr.ReadLine()
-			if (StdErr) {
-				FileAppend, % StdErr "`n", % LogStdErrFile
-				ShowErrorMessage(StdErr)
-			}
+		StdErr := Script.StdErr.ReadLine()
+		if (StdErr) {
+			FileAppend, % StdErr "`n", % LogStdErrFile
+			ShowErrorMessage(StdErr)
 		}
+
 
 		if not (Script.Status = 0) { ; Script finished
 			break
@@ -124,7 +123,7 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 
 ShowErrorMessage(StdErr) {
 	if (StdErr) {
-		RegExMatch(StdErr, "^\[(?<Title>.*)\] (?<Text>.*)$", Group)
+		RegExMatch(StdErr, "^ERROR: (?<Title>.*)[;:] (?<Text>.*)$", Group)
 		Title := (GroupTitle) ? GroupTitle : "Error"
 		Text := (GroupText) ? GroupText : StdErr
 
