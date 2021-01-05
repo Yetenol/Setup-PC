@@ -60,6 +60,8 @@ if not (Url) {
 			: "Downloading vd... [" Duration "]", % Title, , 0x10
 		
 		YoutubeDl("Download","")
+
+		TrayTip, % "Downlaod finished", % " "
 	}
 }
 entirePlaylist := false
@@ -113,7 +115,7 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 		if not (isSimulation) {
 			TrayTip, % "StdOut", % StdOut
 		}
-/*
+
 		StdErr := Script.StdErr.ReadLine()
 		if (StdErr) {
 			FileAppend, % StdErr "`n", % LogStdErrFile
@@ -123,25 +125,19 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 		if not (isSimulation) {
 			TrayTip, % "StdErr", % StdErr
 		}
-*/
+
 
 		if not (Script.Status = 0) { ; Script finished
-			if not (isSimulation) {
-				TrayTip, % "Downlaod finished", % " "StdOut
-			}
-			Script.StdOut.ReadAll()
-			Script.StdErr.ReadAll()
 			break
 		}
 		;StrReplace(StdOut, Filename, "File")
 	}
-	ErrLvl := (Script.Status == 2)	
-
-	if (ErrLvl) { ; Script failed
+	
+	if (Script.Status = 2) { ; Script failed
 		ShowErrorMessage("[Failure] Youtube-dl finished with an unknown error!")
 	}
-	Script.StdOut.ReadAll()
-	Script.StdErr.ReadAll()
+	FileAppend, % Script.StdOut.ReadAll(), % LogStdOutFile
+	FileAppend, % Script.StdErr.ReadAll(), % LogStdErrFile
 	return StdOutAll
 }
 
