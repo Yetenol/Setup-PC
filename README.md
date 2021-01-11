@@ -82,9 +82,9 @@ ___
 
 ### Install [SharpKeys](https://github.com/randyrants/sharpkeys/releases)
 - Load keys from [keymap file](configs/SharpKeys-keymaps.skl)
-- Enable NumLock by default (Value 0 to disable)
-```powershell
-Set-ItemProperty -Path 'Registry::HKU\.DEFAULT\Control Panel\Keyboard' -Name "InitialKeyboardIndicators" -Value "2"
+- Enable NumLock by default using AutoHotKey:
+```ahk
+SetNumLockState, AlwaysOn
 ```
 ___
 
