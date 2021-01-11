@@ -33,7 +33,7 @@ LogStdErrFile := "D:\Dev\Setup-PC\taskbar-tools\err.log"
 #+Y::
 ; Download currently open playlist tab (Win + Shift +Y)
 #Y::
-entirePlaylist := GetKeyState("Shift")
+entirePlaylist := GetKeyState("Shift","P")
 Url := GetActiveBrowserURL()
 Core := "youtube-dl.exe " . Url
 Core := (entirePlaylist) 
@@ -43,13 +43,13 @@ Simulate := Core . " --simulate --no-warnings "
 Download := Core . " --mark-watched --console-title --merge-output-format mp4 "
 
 if not (Url) {
-	;TrayTip, No browser tab found, Try refreshing the page, , 0x3
+	TrayTip, No browser tab found, Try refreshing the page, , 0x3
 } else if not IsURL(Url) {
-	;TrayTip, Invalid url, %url%, , 0x3
+	TrayTip, Invalid url, %url%, , 0x3
 } else {
 	;TrayTip, Fetching information..., %Url%, , 0x10
 	if not (YoutubeDl("Simulate", "--dump-json")) {
-		;TrayTip, No video found on tab, Try refreshing the page, , 0x3
+		TrayTip, No video found on tab, Try refreshing the page, , 0x3
 	} else {
 		Title := YoutubeDl("Simulate", "--get-title")
 		Duration := YoutubeDl("Simulate", "--get-duration", true)
@@ -65,6 +65,9 @@ if not (Url) {
 	}
 }
 entirePlaylist := false
+Title := ""
+Duration := ""
+Filename := ""
 return
 
 YoutubeDl(isSimulation, options, singleLine = false) {
@@ -72,6 +75,7 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 	global Download
 	global LogStdOutFile
 	global LogStdErrFile
+	global Title
 	
 	isSimulation := not ((isSimulation = "D") || (isSimulation = "Download"))
 	options := (isSimulation) ? Simulate options : Download options
@@ -94,6 +98,12 @@ YoutubeDl(isSimulation, options, singleLine = false) {
 		if (StdOut) {
 			FileAppend, % StdOut "`n", % LogStdOutFile
 			StdOutAll := StdOutAll StdOut
+
+			if RegExMatch(StdErr, "^\[download\] (?<Path>.*) has already been downloaded and merged$", Group) {
+				ShowErrorMessage("[Already downloaded] " Title)
+			}
+
+
 			if (singleLine) {
 				Script.StdOut.ReadAll()
 				Script.StdErr.ReadAll()

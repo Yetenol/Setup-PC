@@ -79,6 +79,11 @@ Open `File>Preferences>Settings>User>Commonly Used`
 Open `File>Preferences>Settings>User>Text Editor>Formatting`
 - [x] Editor: Format On Save
 ___
+
+### Install [SharpKeys](https://github.com/randyrants/sharpkeys/releases)
+- Load keys from [keymap file](configs/SharpKeys-keymaps.skl)
+___
+
 ### Install OneDrive
 - Sign in
 
@@ -142,6 +147,7 @@ ___
 - [Registry:](how-to-dos.md#edit-registry) Computer\HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\Edit\Command
     - `code.exe %1` 
 - `C:\Program Files\Microsoft VS Code` Add to [path enviroment variable](how-to-dos.md#edit-path-enviroment-variable)
+
 
 
 
