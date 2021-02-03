@@ -5,14 +5,9 @@
 ; Author: Anton Pusch
 ; Last update: 01-01-2021
 
-; Stop existing instance when lauched again
-#SingleInstance, force 
+#SingleInstance, force ; Override existing instance when lauched again
+Menu, Tray, Icon, % A_WinDir "\system32\imageres.dll", 174 ; Setup a keyboard as taskbar icon:
 
-; Setup a keyboard as taskbar icon:
-Menu, Tray, Icon, % A_WinDir "\system32\imageres.dll", 174 
-
-
-SetNumLockState, AlwaysOn
 ; ===== Global shortcuts: =====
 ; Modifier keys:    # Win    ^ Ctrl    + Shift    ! Alt
 ; Notifications flags:
@@ -24,6 +19,54 @@ SetNumLockState, AlwaysOn
 ;   0x3 Error icon
 ;   0x10 Silent
 ;   0x20 Large icon
+
+; Always use digits on NumPad
+SetNumLockState, AlwaysOn
+
+; -=-=-=-=-=- Windows Media API -=-=-=-=-=-
+; Enables remote media control for Netflix, Primevideo
+
+; Is active window a media player? 
+MediaPlayerActive() {
+    return (WinActive("Netflix ahk_class ApplicationFrameWindow")
+    || WinActive("Amazon Prime Video for Windows ahk_class ApplicationFrameWindow"))
+}
+
+; Add Play/Pause functionality to Netflix, Primevideo
+Media_Play_Pause::
+media_is_fast_forwarding = false
+if (MediaPlayerActive())
+{
+    Send, {Space}
+}
+return
+
+; Add continues Fast Forward functionality to Netflix, Primevideo
+; fast forwards until key pressed again
+#MaxThreadsPerHotkey 2; Allow multiple threads so that this hotkey can "turn itself off":
+Media_Next::
+#MaxThreadsPerHotkey 1
+if (MediaPlayerActive())
+{
+    if (media_is_fast_forwarding = true) ; continues fast forwarding is active
+    {
+        media_is_fast_forwarding := false ; Signal the other thread to stop
+    } else {
+        media_is_fast_forwarding := true ; continues fast forwarding is active
+        while (media_is_fast_forwarding = true && MediaPlayerActive() = true)
+        {
+            Send, {Right} ; forward media
+            if (WinActive("Netflix")) {
+                Sleep, 1000 ; cooldown 1s because Netflix forwards 7 seconds each time
+            } else if (WinActive("Amazon Prime Video for Windows")) {
+                Sleep, 1500 ; cooldown 1.5s because Primevideo forwards 10 seconds each time
+            } else {
+                Sleep, 1000 ; cooldown 1s by default
+            }
+        }
+    }
+}
+return
 
 
 ; Bring the Rainmeter widgets to the foreground (Win + Shift + R)
@@ -52,10 +95,6 @@ If (ErrorLevel = 0) ; AutoHotkey.exe is not running
     PressingShiftKey := false
 }
 return
-
-
-
-
 
 ; Close active window/tab
 ; Activated by touchpad (internal shortcut)
