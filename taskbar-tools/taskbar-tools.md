@@ -30,6 +30,13 @@
 
 ## [ShareX](https://github.com/ShareX/ShareX/releases/)
 
+- Disable PrintScreen shortcut elsewhere
+    -  Open `Taskbar>Onedrive>Settings>Backup` tab
+        - [ ] Automatically save screenshots I capture to OneDrive
+    - Open **Ease of Access>Interaction>Keyboard**
+        > `ms-settings:easeofaccess-keyboard`
+        - [ ] Use the PrtScn button to open screen snipping
+
 - run at [startup](../how-to-dos.md#edit-startup-apps)
 
 > Open `Taskbar>ShareX>Hotkey settings`

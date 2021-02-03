@@ -82,6 +82,10 @@ ___
 
 ### Install [SharpKeys](https://github.com/randyrants/sharpkeys/releases)
 - Load keys from [keymap file](configs/SharpKeys-keymaps.skl)
+- Enable NumLock by default using AutoHotKey:
+```ahk
+SetNumLockState, AlwaysOn
+```
 ___
 
 ### Install OneDrive
@@ -144,8 +148,10 @@ ___
 
 
 ### Install [AutoHotkey](https://www.autohotkey.com/)
-- [Registry:](how-to-dos.md#edit-registry) Computer\HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\Edit\Command
-    - `code.exe %1` 
+- Set default editor to Visual Studio Code:
+```powershell
+Set-ItemProperty -Path 'Registry::HKCR\AutoHotkeyScript\Shell\Edit' -Name "Command" -Value 'code.exe %1'
+```
 - `C:\Program Files\Microsoft VS Code` Add to [path enviroment variable](how-to-dos.md#edit-path-enviroment-variable)
 
 

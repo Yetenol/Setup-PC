@@ -1,27 +1,35 @@
 [Home](README.md)
 # 4) Windows Settings
 
-Open `System>Display`
+Open **System>Display**
+> `ms-settings:display`
 - [x] Schedule night light _🠘 (Night light settings)_
 - `100%` Change the size of text, apps, and other items
 
-Open `System>Notif‌ications & actions`
+
+Open **System>Notif‌ications & actions**
+> `ms-settings:notifications`
 - [ ] Show notif‌ications on the lock screen
 - [ ] Show me the Windows welcome experience after updates and occasionally
 
-Open `System>Power & sleep`
+Open **System>Power & sleep**
+> `ms-settings:powersleep`
 - `10 minutes` On battery power, turn off after
 - `20 minutes` When plugged in, turn off after
 - `15 minutes` On battery power, PC goes to sleep after
 - `Never` When plugged in, PC goes to sleep after
 
-Open `System>Storage`
+Open **System>Storage**
+> `ms-settings:storagesense`
 - [x] Storage sense
 
-Open `System>Clipboard`
+Open **System>Clipboard**
+> `ms-settings:clipboard`
 - [x] Clipboard history
 
-Open `Devices>Touchpad>Advanced gesture conf‌iguration`
+Open **Devices>Touchpad>Advanced gesture conf‌iguration**
+> `ms-settings:devices-touchpad` 
+>- Advanced gesture conf‌iguration
 - Conf‌igure your three f‌inger gestures <br>
 `Action Center` Taps <br>
 `Switch apps` Up <br>
@@ -36,21 +44,30 @@ Open `Devices>Touchpad>Advanced gesture conf‌iguration`
 `Next Track` Left <br>
 `Previous track` Right <br>
 
-Open `Personalization>Colors`
+Open **Personalization>Colors**
+> `ms-settings:personalization-colors`
 - Set color to orange
 - `Dark` Choose your default app mode
 
-Open `Personalization>Start`
+Open **Personalization>Start**
+> `ms-settings:personalization-start`
 - [ ] Show more tiles on Start
 - [ ] Show suggestions occasionally in Start
 - [x] Use Start full screen
 
-Open `Personalization>Taskbar>Select which icons appear on the taskbar`
+Open **Personalization>Taskbar>Select which icons appear on**the taskbar`
+> `ms-settings:personalization-start-places`
 - [x] Always show all icons in the notif‌ication area
 - Hide Cortana search box via taskbar menu
 
-Open `Devices>Typing>Hardware keyboard`
+Open **Devices>Typing>Hardware keyboard**
+> `ms-settings:devicestyping-hwkbtextsuggestions`
 - [x] Show text suggestions as I type
 
-Open `Accounts>Email & accounts`
+Open **Accounts>Email & accounts**
+> `ms-settings:emailandaccounts`
 - Add Google account
+
+Open **Ease of Access>Interaction>Keyboard**
+> `ms-settings:easeofaccess-keyboard`
+- [ ] Use the PrtScn button to open screen snipping
