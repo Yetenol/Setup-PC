@@ -24,49 +24,48 @@ Menu, Tray, Icon, % A_WinDir "\system32\imageres.dll", 174 ; Setup a keyboard as
 SetNumLockState, AlwaysOn
 
 ; -=-=-=-=-=- Windows Media API -=-=-=-=-=-
-; Enables remote media control for Netflix, Primevideo
+; Enables remote media control for Netflix, PrimeVideo
 
-; Is active window a media player? 
+; Is active window a media player?
 MediaPlayerActive() {
-    return (WinActive("Netflix ahk_class ApplicationFrameWindow")
-    || WinActive("Amazon Prime Video for Windows ahk_class ApplicationFrameWindow"))
+    return (WinActive("Netflix ahk_class ApplicationFrameWindow") ;  Netflix
+    || WinActive("Amazon Prime Video for Windows ahk_class ApplicationFrameWindow")) ; PrimeVideo
 }
 
-; Add Play/Pause functionality to Netflix, Primevideo
+; Play/Pause media (Netflix, PrimeVideo)
 Media_Play_Pause::
-media_is_fast_forwarding = false
+media_is_winding := false ; stop media winding
 if (MediaPlayerActive())
 {
     Send, {Space}
 }
 return
 
-; Add continues Fast Forward functionality to Netflix, Primevideo
-; fast forwards until key pressed again
-#MaxThreadsPerHotkey 2; Allow multiple threads so that this hotkey can "turn itself off":
+#MaxThreadsPerHotkey 2; allow 2 threads so that these hotkeys can "turn themselves off"
+; Fast Forwards media until key pressed again or paused (Netflix, PrimeVideo)
 Media_Next::
-#MaxThreadsPerHotkey 1
-if (MediaPlayerActive())
-{
-    if (media_is_fast_forwarding = true) ; continues fast forwarding is active
+MediaWind("fast_forward")
+return
+
+; Rewind media until key pressed again or paused (Netflix, PrimeVideo)
+Media_Prev::
+MediaWind("rewind")
+return
+#MaxThreadsPerHotkey 1 ; default
+
+MediaWind(direction) {
+    global media_is_winding
+    if (MediaPlayerActive())
     {
-        media_is_fast_forwarding := false ; Signal the other thread to stop
-    } else {
-        media_is_fast_forwarding := true ; continues fast forwarding is active
-        while (media_is_fast_forwarding = true && MediaPlayerActive() = true)
+        media_is_winding := !media_is_winding ; start/stop winding (stop kills over thread)
+        while (media_is_winding && MediaPlayerActive())
         {
-            Send, {Right} ; forward media
-            if (WinActive("Netflix")) {
-                Sleep, 1000 ; cooldown 1s because Netflix forwards 7 seconds each time
-            } else if (WinActive("Amazon Prime Video for Windows")) {
-                Sleep, 1500 ; cooldown 1.5s because Primevideo forwards 10 seconds each time
-            } else {
-                Sleep, 1000 ; cooldown 1s by default
-            }
+            Send, % (direction="fast_forward") ? "{Right}" : "{Left}" ; forward media / rewind media
+            Sleep, % WinActive("Netflix") ? WinActive("Amazon Prime Video for Windows") ? 1500 : 1000 : 1000
         }
     }
+    return
 }
-return
 
 
 ; Bring the Rainmeter widgets to the foreground (Win + Shift + R)
