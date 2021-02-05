@@ -7,8 +7,8 @@
     "enableForProtectedPages": false,
     "enabled": true,
     "location": {
-        "latitude": 52.52,
-        "longitude": 13.405
+        "latitude": null,
+        "longitude": null
     },
     "notifyOfNews": false,
     "presets": [],
@@ -37,7 +37,10 @@
         "stackoverflow.com",
         "zoom.us",
         "tuport.sap.tu-berlin.de",
-        "jdhitsolutions.com"
+        "jdhitsolutions.com",
+        "scholar.google.de",
+        "scholar.google.com",
+        "www.valgrind.org"
     ],
     "siteListEnabled": [],
     "syncSettings": true,
