@@ -30,19 +30,24 @@ Open **System>Clipboard**
 Open **Devices>Touchpad>Advanced gesture conf‌iguration**
 > `ms-settings:devices-touchpad` 
 >- Advanced gesture conf‌iguration
-- Conf‌igure your three f‌inger gestures <br>
-`Action Center` Taps <br>
-`Switch apps` Up <br>
-`Hide everything other than the app in focus` Down <br>
-`Forward navigation` Left <br>
-`Backward navigation` Right <br>
 
-- Conf‌igure your four f‌inger gestures <br>
-`Play/pause` Taps <br>
-`Volume up` Up <br>
-`Volume down` Down <br>
-`Next Track` Left <br>
-`Previous track` Right <br>
+> Conf‌igure your **three** f‌inger gestures
+> - `Custom shortcut` Taps
+>   - `UNTBR` = `Ctrl + Pause` 
+>   - Record using [window-tools.ahk](taskbar-tools/window-tools.ahk) tray menu 
+> - `Switch apps` Up
+> - `Custom shortcut` Down
+>   -  `PAUSE` 
+>   - Record using [window-tools.ahk](taskbar-tools/window-tools.ahk) tray menu 
+> - `Forward navigation` Left
+> - `Backward navigation` Right
+
+> Conf‌igure your **four** f‌inger gestures
+> - `Play/pause` Taps
+> - `Volume up` Up
+> - `Volume down` Down
+> - `Next Track` Left
+> - `Previous track` Right
 
 Open **Personalization>Colors**
 > `ms-settings:personalization-colors`
