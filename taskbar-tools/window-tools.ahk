@@ -7,6 +7,13 @@
 
 #SingleInstance, force ; Override existing instance when lauched again
 Menu, Tray, Icon, % A_WinDir "\system32\imageres.dll", 174 ; Setup a keyboard as taskbar icon:
+Menu, Tray, Add ; Creates a separator line.
+Menu, Tray, Add, Send Pause, SendPause
+Menu, Tray, Add, Send Ctrl+Pause, SendCtrlBreak
+
+; Always use digits on NumPad
+SetNumLockState, AlwaysOn
+return
 
 ; ===== Global shortcuts: =====
 ; Modifier keys:    # Win    ^ Ctrl    + Shift    ! Alt
@@ -20,8 +27,7 @@ Menu, Tray, Icon, % A_WinDir "\system32\imageres.dll", 174 ; Setup a keyboard as
 ;   0x10 Silent
 ;   0x20 Large icon
 
-; Always use digits on NumPad
-SetNumLockState, AlwaysOn
+
 
 ; -=-=-=-=-=- Windows Media API -=-=-=-=-=-
 ; Enables remote media control for Netflix, PrimeVideo
@@ -190,4 +196,18 @@ return
 ; Make active window's transparency invisible (Win + Numpad9)
 #Numpad9::
 Run, nircmd win trans foreground 0
+return
+
+; Send PAUSE
+SendPause:
+TrayTip, % "Send PAUSE", % "Sending PAUSE in 2s",, 0x10
+Sleep, 2000
+Send, % "{Pause}"
+return
+
+; Send CTRL + PAUSE
+SendCtrlBreak:
+TrayTip, % "Send PAUSE", % "Sending CTRL + PAUSE in 2s",, 0x10
+Sleep, 2000
+Send, % "{CtrlBreak}"
 return
