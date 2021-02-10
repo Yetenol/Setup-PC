@@ -1,11 +1,12 @@
 ; A tool to handle youtube-dl interactions
 ; Author:		Anton Pusch
-; Last edit:	2021-01-04
+; Last edit:	2021-02-10
 ; Pressing Win + Y downloads the currently open youtube tab
 ; Pressing Win + Shift + Y the currently open playlist
 
 #SingleInstance, force
-Menu, Tray, Icon, % "C:\Icon\YouTube.ico" ; Shows a world icon in the system tray
+SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory
+Menu, Tray, Icon, % "YouTube Downloader.ico" ; Shows a world icon in the system tray
 
 ModernBrowsers := "ApplicationFrameWindow,Chrome_WidgetWin_0,Chrome_WidgetWin_1,Maxthon3Cls_MainFrm,MozillaWindowClass,Slimjet_WidgetWin_1"
 LegacyBrowsers := "IEFrame,OperaWindowClass"

@@ -3,7 +3,7 @@
 ; - launches external programs
 
 ; Author: Anton Pusch
-; Last update: 01-01-2021
+; Last update: 2021-02-10
 
 #SingleInstance, force ; Override existing instance when lauched again
 Menu, Tray, Icon, % A_WinDir "\system32\imageres.dll", 174 ; Setup a keyboard as taskbar icon:
