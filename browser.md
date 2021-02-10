@@ -7,9 +7,14 @@
 - Search anything and select EdgeDeflector as default program
 ___
 
-### Install [Edge Chromium](https://www.microsoft.com/de-de/edge) and [Brave](https://brave.com/)
+### Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
 
 - Sign in to sync
+
+Edit experimental feautures
+- Disabled `about:flags/#overscroll-history-navigation`
+- Enabled `about:flags/#edge-pdf-two-page-view`
+- Disabled `about:flags/#edge-experimental-scrolling`
 
 Open `Settings>Profiles>Addresses and more`
 - [ ] Save and fill addresses
@@ -32,21 +37,27 @@ Install plugins
 > 1. Install [Dark Reader](https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc?h) <br>
 `Dev tools>Preview new design` <br>
 Import [Settings-File](Dark-Reader-Settings.json) (`Settings>Manage settings>Import Settings`)
-> 1. Install [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) [#](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak) <br>
+> 1. Install [uBlock Origin](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak) 
+ | [*(Chrome Webstore)*](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) <br>
 > Import [Settings-File](my-ublock-backup.txt) (`Settings>Restore from file`)
 > 1. Install [Chrometana - Redirect Bing Somewhere Better](https://chrome.google.com/webstore/detail/chrometana-redirect-bing/kaicbfmipfpfpjmlbpejaoaflfdnabnc)
 > 1. Install [Tabliss - A Beautiful New Tab](https://chrome.google.com/webstore/detail/tabliss-a-beautiful-new-t/hipekcciheckooncpjeljhnekcoolahp)
 > 1. Install [User-Agent Switcher](https://chrome.google.com/webstore/detail/user-agent-switcher/clddifkhlkcojbojppdojfeeikdkgiae)
 > 1. Install [Picture-in-Picture Extension (by Google)](https://chrome.google.com/webstore/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg)
-> 1. Install [I don't care about cookies](https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja) [#](https://microsoftedge.microsoft.com/addons/detail/i-dont-care-about-cookie/oholpbloipjbbhlhohaebmieiiieioal)
+> 1. Install [I don't care about cookies](https://microsoftedge.microsoft.com/addons/detail/i-dont-care-about-cookie/oholpbloipjbbhlhohaebmieiiieioal)
+  | [*(Chrome Webstore)*](https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja)
 > 1. Install [Imagus](https://chrome.google.com/webstore/detail/imagus/immpkjjlgappgfkkfieppnmlhakdmaab)
-> 1. Install [Office](https://chrome.google.com/webstore/detail/office/ndjpnladcallmjemlbaebfadecfhkepb) [#](https://microsoftedge.microsoft.com/addons/detail/office/gggmmkjegpiggikcnhidnjjhmicpibll) <br>
+> 1. Install [Office](https://microsoftedge.microsoft.com/addons/detail/office/gggmmkjegpiggikcnhidnjjhmicpibll) 
+  | [*(Chrome Webstore)*](https://chrome.google.com/webstore/detail/office/ndjpnladcallmjemlbaebfadecfhkepb) <br>
 `On click` Site access
-> 1. Install [Download All Images](https://chrome.google.com/webstore/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm) [#](https://microsoftedge.microsoft.com/addons/detail/download-all-images/focinmnfmbmhknhdaamhppgdhahnbgif) <br>
+> 1. Install [Download All Images](https://microsoftedge.microsoft.com/addons/detail/download-all-images/focinmnfmbmhknhdaamhppgdhahnbgif) 
+  | [*(Chrome Webstore)*](https://chrome.google.com/webstore/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm) <br>
 `On click` Site access
-> 1. Install [Honey](https://chrome.google.com/webstore/detail/honey/bmnlcjabgnpnenekpadlanbbkooimhnj) [#](https://microsoftedge.microsoft.com/addons/detail/honey/amnbcmdbanbkjhnfoeceemmmdiepnbpp) <br>
+> 1. Install [Honey](https://microsoftedge.microsoft.com/addons/detail/honey/amnbcmdbanbkjhnfoeceemmmdiepnbpp) 
+  | [*(Chrome Webstore)*](https://chrome.google.com/webstore/detail/honey/bmnlcjabgnpnenekpadlanbbkooimhnj) <br>
 `On click` Site access
-> 1. Install [Open in VLC™ media player](https://chrome.google.com/webstore/detail/open-in-vlc-media-player/ihpiinojhnfhpdmmacgmpoonphhimkaj) [#](https://microsoftedge.microsoft.com/addons/detail/open-in-vlc%E2%84%A2-media-player/hjfcjapkfahlmlefedkkpbbkeddpnnlc) <br>
+> 1. Install [Open in VLC™ media player](https://microsoftedge.microsoft.com/addons/detail/open-in-vlc%E2%84%A2-media-player/hjfcjapkfahlmlefedkkpbbkeddpnnlc)
+  | [*(Chrome Webstore)*](https://chrome.google.com/webstore/detail/open-in-vlc-media-player/ihpiinojhnfhpdmmacgmpoonphhimkaj) <br>
 `On click` Site access
 
 
