@@ -50,7 +50,6 @@
 >- [x] Use custom screenshot folder
 >- `%MyPictures%\Screenshots` Screenshot folder
 
-
-## [LidLock](https://download.cnet.com/Lid-Lock/3000-2094_4-76464070.html)
+## [LapLock]](https://github.com/dechamps/laplock/releases)
 
 ## [EarTrumpet](https://www.microsoft.com/de-de/p/eartrumpet/9nblggh516xp?activetab=pivot:overviewtab)
