@@ -15,6 +15,7 @@ Edit experimental feautures
 - Disabled `about:flags/#overscroll-history-navigation`
 - Enabled `about:flags/#edge-pdf-two-page-view`
 - Disabled `about:flags/#edge-experimental-scrolling`
+- Disabled `about:flags/#enable-ntp-remote-suggestions`
 
 Open `Settings>Profiles>Addresses and more`
 - [ ] Save and fill addresses
