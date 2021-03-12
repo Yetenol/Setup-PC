@@ -52,6 +52,8 @@ Open **Devices>Touchpad>Advanced gesture conf‌iguration**
 Open **Personalization>Colors**
 > `ms-settings:personalization-colors`
 - Set color to orange
+- [ ] Start, taskbar, and action cener
+- [ ] Title bars and window borders
 - `Dark` Choose your default app mode
 
 Open **Personalization>Start**
