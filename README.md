@@ -4,7 +4,7 @@
 [2) Software (with configuration)](#2-Software-with-configuration)  
 
 [3) Windows Configurations](#3-Windows-Configurations)  
-[4) Browser](browser.md)  
+[4) Browser](browser-computer.md)  
 
 [5) Windows Settings](windows-settings.md)  
 [6) Taskbar Tools](taskbar-tools/taskbar-tools.md)  
