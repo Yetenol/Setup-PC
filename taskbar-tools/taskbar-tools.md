@@ -46,7 +46,7 @@
 >- `Win + Insert` Start/Stop screen recording
 >- `Shift + Win + Insert` Start/Stop screen recording (GIF)
 
-> Open `Taskbar>ShareX>Application settings`
+> Open `Taskbar>ShareX>Application settings>Paths`
 >- [x] Use custom screenshot folder
 >- `%MyPictures%\Screenshots` Screenshot folder
 
