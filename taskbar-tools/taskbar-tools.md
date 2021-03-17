@@ -46,6 +46,12 @@
 >- `Win + Insert` Start/Stop screen recording
 >- `Shift + Win + Insert` Start/Stop screen recording (GIF)
 
+> Open `Taskbar>ShareX>After capture task`
+>- [x] Copy image to clipboard
+>- [x] Save image to file
+>- [ ] Upload image to host
+>- [ ] *Everything else*
+
 > Open `Taskbar>ShareX>Application settings>Paths`
 >- [x] Use custom screenshot folder
 >- `%MyPictures%\Screenshots` Screenshot folder
