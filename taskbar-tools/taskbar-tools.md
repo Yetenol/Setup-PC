@@ -56,6 +56,6 @@
 >- [x] Use custom screenshot folder
 >- `%MyPictures%\Screenshots` Screenshot folder
 
-## [LapLock]](https://github.com/dechamps/laplock/releases)
+## [LapLock](https://github.com/dechamps/laplock/releases)
 
 ## [EarTrumpet](https://www.microsoft.com/de-de/p/eartrumpet/9nblggh516xp?activetab=pivot:overviewtab)
