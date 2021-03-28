@@ -1,23 +1,16 @@
-# Table of Contents (How to setup my PC)
+# How to setup my PC
+## Table of Contents
 
-[1) Software (without configuration)](#1-Software-without-configuration)  
-[2) Software (with configuration)](#2-Software-with-configuration)  
+1. [Software (without configuration)](#1-Software-without-configuration)  
+1. [Software (with configuration)](#2-Software-with-configuration)  
+1. [Windows Configurations](#3-Windows-Configurations)  
+1. [Browser](browser-computer.md)  
+1. [Windows Settings](windows-settings.md)  
+1. [Taskbar Tools](taskbar-tools/taskbar-tools.md)  
+1. [Shell Tools](shell-tools/)
+1. [HowToDos](how-to-dos.md)
 
-[3) Windows Configurations](#3-Windows-Configurations)  
-[4) Browser](browser-computer.md)  
-
-[5) Windows Settings](windows-settings.md)  
-[6) Taskbar Tools](taskbar-tools/taskbar-tools.md)  
-[7) Shell Tools](shell-tools/)
-
-[? HowToDos](how-to-dos.md)
-
-
-
-
-
-
-# 1) Software (without configuration)
+# 1. Software (without configuration)
 
 1. Install [WhatsApp Desktop](https://www.microsoft.com/de-de/p/whatsapp-desktop/9nksqgp7f2nh?activetab=pivot:overviewtab) <br>
 Swtich to `Dark` Theme
