@@ -1,1 +1,0 @@
-- Disabled `about:flags/#enable-ntp-remote-suggestions`

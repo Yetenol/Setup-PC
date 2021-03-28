@@ -1,10 +1,11 @@
 [Home](README.md)
-# 4) Setup Computer Browsers
-- [Experimental features](#Experimental%20features)
-- [Settigs](#Settings)
-- [Extensions](#Extensions)
+# 4) Setup Browsers
+1. [App setup](#Install-Edge-Chromium)
+1. [Experimental features](#Experimental%20features)
+1. [Settigs](#Settings)
+1. [Extensions](#Extensions)
 
-## 1. Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
+## Install [Edge Chromium](https://www.microsoft.com/de-de/edge)
 - Sign in to sync
 
 - If prefering other browser?
@@ -91,7 +92,7 @@ ___
     > `Preview new design` and `Apply`
     >- `Dark Reader > Dev tools > Preview new design`  
     >
-    > Import site list and settings from [config file](configs\Dark-Reader-config.json)   
+    > Import site list and settings from [config file](configs\Dark-Reader.json)   
     >- `Dark Reader > Settings > Manage settings > Import Settings`
 1. Install [uBlock Origin](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak) 
    | [*(Chrome Webstore)*](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
