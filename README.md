@@ -1,10 +1,10 @@
-# How to setup my PC
-## Table of Contents
+# How to setup my Windows computers
+## Table of Contents ![Lines of code](https://img.shields.io/tokei/lines/github/yetenol/setup-computer?color=white) ![GitHub last commit](https://img.shields.io/github/last-commit/yetenol/setup-computer?color=white)
 
 1. [Software (without configuration)](#1-Software-without-configuration)  
 1. [Software (with configuration)](#2-Software-with-configuration)  
 1. [Windows Configurations](#3-Windows-Configurations)  
-1. [Browser](browser-computer.md)  
+1. [Browser](browser.md)  
 1. [Windows Settings](windows-settings.md)  
 1. [Taskbar Tools](taskbar-tools/taskbar-tools.md)  
 1. [Shell Tools](shell-tools/)
