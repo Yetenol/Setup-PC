@@ -96,8 +96,8 @@ ___
     >- `Dark Reader > Settings > Manage settings > Import Settings`
 1. Install [uBlock Origin](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak) 
    | [*(Chrome Webstore)*](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
-    > Import [config file](configs\uBlock-Origin-config.ini) 
-    >- `uBlock Origin > Settings > Restore from file`
+    > Import [filter list](configs\uBlock-filters.txt) 
+    >- `uBlock Origin > Open the dashboard > My filters > Import and append`
 1. Install [Chrometana - Redirect Bing Somewhere Better](https://chrome.google.com/webstore/detail/chrometana-redirect-bing/kaicbfmipfpfpjmlbpejaoaflfdnabnc)
 1. Install [Tabliss - A Beautiful New Tab](https://chrome.google.com/webstore/detail/tabliss-a-beautiful-new-t/hipekcciheckooncpjeljhnekcoolahp)
 1. Install [Picture-in-Picture Extension (by Google)](https://chrome.google.com/webstore/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg)

@@ -1,0 +1,6 @@
+# Disable Google's People also search for function
+www.google.com##div[class*="explore-main"]
+www.google.com##div[class*="exp-outline"]
+google.*##div[id^="eob"]
+google.*##.exp-outline
+
