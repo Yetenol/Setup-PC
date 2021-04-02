@@ -1,16 +1,16 @@
 # How to setup my Windows computers
 ## Table of Contents ![Lines of code](https://img.shields.io/tokei/lines/github/yetenol/setup-computer?color=white) ![GitHub last commit](https://img.shields.io/github/last-commit/yetenol/setup-computer?color=white)
 
-1. [Software (without configuration)](#1-Software-without-configuration)  
-1. [Software (with configuration)](#2-Software-with-configuration)  
-1. [Windows Configurations](#3-Windows-Configurations)  
+1. [Software (without configuration)](#Software-without-configuration)  
+1. [Software (with configuration)](#Software-with-configuration)  
+1. [Windows Configurations](#Windows-Configurations)  
 1. [Browser](browser.md)  
 1. [Windows Settings](windows-settings.md)  
 1. [Taskbar Tools](taskbar-tools/taskbar-tools.md)  
 1. [Shell Tools](shell-tools/)
 1. [HowToDos](how-to-dos.md)
 
-# 1. Software (without configuration)
+# Software (without configuration)
 
 1. Install [WhatsApp Desktop](https://www.microsoft.com/de-de/p/whatsapp-desktop/9nksqgp7f2nh?activetab=pivot:overviewtab) <br>
 Swtich to `Dark` Theme
@@ -36,7 +36,7 @@ Don't run at [startup](how-to-dos.md#edit-startup-apps)
 
 
 
-# 2. Software (with configuration)
+# Software (with configuration)
 
 ### Install [KeePass](https://keepass.info/download.html)
 - Install plugin [KeeAnywhere](https://github.com/Kyrodan/KeeAnywhere/releases) and add OneDrive account
@@ -152,7 +152,7 @@ Set-ItemProperty -Path 'Registry::HKCR\AutoHotkeyScript\Shell\Edit' -Name "Comma
 
 
 
-# 3) Windows Configurations
+# Windows Configurations
 
 ### Open `File Explorer options`
 - `This PC` Open File Explorer to:
@@ -172,3 +172,13 @@ ___
 ### Local Group Policy
 - [GroupPolicy:](how-to-dos.md#edit-local-group-policy) `Computer Configuration>Administrative Templates>System>Filesystem`
     - [x] Enable Win32 long paths 
+
+
+
+
+
+# [Browser](browser.md)  
+# [Windows Settings](windows-settings.md)  
+# [Taskbar Tools](taskbar-tools/taskbar-tools.md)  
+# [Shell Tools](shell-tools/)
+# [HowToDos](how-to-dos.md)

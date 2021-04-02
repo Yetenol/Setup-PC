@@ -1,5 +1,5 @@
 [Home](README.md)
-# 4) Windows Settings
+# Windows Settings
 
 Open **System>Display**
 > `ms-settings:display`
