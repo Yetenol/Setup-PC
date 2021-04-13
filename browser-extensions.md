@@ -40,6 +40,8 @@
     > - `uBlock Origin > Open the dashboard > My filters > Import and append`
 1. Install [SponsorBlock for YouTube - Skip Sponsorships](https://microsoftedge.microsoft.com/addons/detail/sponsorblock-f%C3%BCr-youtube-/mbmgnelfcpoecdepckhlhegpcehmpmji)
    - [x] Allow in InPrivate 
+   > `SponsorBlock > Options`
+   > - `Manual Skip` = Intermission/Intro Animation`
 1. Install [Enhancer for YouTube™](https://microsoftedge.microsoft.com/addons/detail/enhancer-for-youtube%E2%84%A2/dlgfaleeejmphhnemjgiaekdbonkagkd) | [*(Chrome Webstore)*](https://chrome.google.com/webstore/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle)
    - [x] Allow in InPrivate 
     > `Enhancer for YouTube > Toolbar > Buttons`
