@@ -13,7 +13,7 @@
     > `Preview new design` and `Apply`
     >- `Dark Reader > Dev tools > Preview new design`  
     >
-    > Import site list and settings from [config file](configs\Dark-Reader.json)   
+    > Import site list and settings from [config file](configs/Dark-Reader.json)   
     >- `Dark Reader > Settings > Manage settings > Import Settings`
 1. Install [I don't care about cookies](https://microsoftedge.microsoft.com/addons/detail/i-dont-care-about-cookie/oholpbloipjbbhlhohaebmieiiieioal)
   | [*(Chrome Webstore)*](https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja)
@@ -36,7 +36,7 @@
 1. Install [uBlock Origin](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak) 
    | [*(Chrome Webstore)*](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
       - [x] Allow in InPrivate 
-    > Import [filter list](configs\uBlock-filters.txt) 
+    > Import [filter list](configs/uBlock-filters.txt) 
     > - `uBlock Origin > Open the dashboard > My filters > Import and append`
 1. Install [SponsorBlock for YouTube - Skip Sponsorships](https://microsoftedge.microsoft.com/addons/detail/sponsorblock-f%C3%BCr-youtube-/mbmgnelfcpoecdepckhlhegpcehmpmji)
    - [x] Allow in InPrivate 
